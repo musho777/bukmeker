@@ -1,11 +1,14 @@
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import {LoginHeader} from '../Components/Headers/loginHeader';
+import { MainHeader } from '../Components/Headers/MainHeader';
 import { RegistrationWhite } from '../Components/RegistrationWhite';
 import {Login} from '../Pages/login';
+import { Main } from '../Components/Main';
 import {Registration} from '../Pages/registration';
 import { RegistrationWhiteFull } from '../Pages/RegistrationWhiteFull';
 import { RegistrationWhitePhone } from '../Pages/RegistrationWhitePhone';
+import { MainPage } from '../Pages/MainPage';
 export default Navigation = () => {
   const Stack = createStackNavigator();
   const MyTheme = {
@@ -17,8 +20,8 @@ export default Navigation = () => {
     },
   };
   return (
-    <NavigationContainer theme={MyTheme} initialRouteName={'login'}>
-      <Stack.Navigator>
+    <NavigationContainer theme={MyTheme} >
+      <Stack.Navigator initialRouteName={'login'}>
         <Stack.Screen
           name="login"
           component={Login}
@@ -46,8 +49,16 @@ export default Navigation = () => {
               <LoginHeader text={'Регистрация'} onPress={() => navigation.navigate('registration')}/>)
           }}
         />
+         <Stack.Screen
+          name="main"
+          component={MainPage}
+          options={{
+            headerTransparent: true,
+            header: ({navigation}) => (
+              <MainHeader />)
+          }}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
 };
-// RegistrationWhiteFull
