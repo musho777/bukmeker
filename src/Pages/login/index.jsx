@@ -5,7 +5,7 @@ import { Button } from "../../../ui/Button"
 import { Input } from "../../../ui/Input"
 import img from '../../Assets/images/back.png'
 import { MobileIcone } from '../../Assets/svg'
-export const Login = () =>{
+export const Login = ({navigation}) =>{
     const [data,setData] = useState([
         {value:''},
         {value:''}
@@ -17,7 +17,7 @@ export const Login = () =>{
 
     }
     return < >
-        <ImageBackground  style = {styles.image} source={img} resizeMode="cover">
+        <ImageBackground  style = {Globalstyles.Bgimage} source={img} resizeMode="cover">
             <View style = {Globalstyles.body}>
                 <View style = {styles.inputWrapper}>
                     <Input onChange = {(e)=>handelChange(e,0)} value = {data[0].value} placeholder = 'E-mail или ID' width='90%' />
@@ -33,17 +33,13 @@ export const Login = () =>{
                 </View>
                 <Text style = {styles.forgotPassword}>Забыли пароль?</Text>
             </View>
-            <TouchableOpacity style = {{backgroundColor:'#40A789',height:50,justifyContent:'center',alignItems:'center'}}>
+            <TouchableOpacity onPress={()=>navigation.navigate('registration')} style = {{backgroundColor:'#40A789',height:50,justifyContent:'center',alignItems:'center'}}>
                 <Text style = {{fontSize:14,fontFamily:'Inter',color:'#F5F6FA',fontWeight:500}}>РЕГИСТРАЦИЯ</Text>
             </TouchableOpacity>
         </ImageBackground>
     </>
 }
 const styles = StyleSheet.create({
-    image:{
-        width:"100%",
-        height:"100%",
-    },
     inputWrapper:{
         position:'relative',
         marginVertical:50,

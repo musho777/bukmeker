@@ -52,3 +52,43 @@ export const Arrow = () =>{
   />
 </Svg>
 }
+
+export const RegBlock = ({title}) =>{
+  if(title){
+    return <Svg
+    width={34}
+    height={34}
+    viewBox="0 0 34 34"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <Rect width={34} height={34} rx={17} fill="#40A789" />
+    <Rect
+      x={11}
+      y={9}
+      width={12}
+      height={16}
+      rx={1}
+      stroke="#fff"
+      strokeWidth={2}
+    />
+    <Rect x={10.5} y={22.5} width={13} height={1} rx={0.5} stroke="#fff" />
+    <Rect x={15.5} y={23.5} width={3} height={1} rx={0.5} stroke="#40A789" />
+  </Svg>
+  }
+  else {
+    return <Svg
+    width={34}
+    height={34}
+    viewBox="0 0 34 34"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <Rect width={34} height={34} rx={17} fill="#40A789" />
+    <Rect x={10} y={8} width={14} height={18} rx={2} fill="#fff" />
+    <Rect x={12.5} y={12.5} width={7} height={1} rx={0.5} stroke="#40A789" />
+    <Rect x={12.5} y={15.5} width={5} height={1} rx={0.5} stroke="#40A789" />
+    <Rect x={12.5} y={18.5} width={7} height={1} rx={0.5} stroke="#40A789" />
+  </Svg>
+  }
+}
