@@ -1,14 +1,14 @@
-import { View,Text,StyleSheet,TouchableOpacity } from 'react-native'
+import { View,Text,StyleSheet,TouchableOpacity, SafeAreaView } from 'react-native'
 import {  } from 'react-native-gesture-handler'
 import { Arrow } from '../../Assets/svg'
 export const LoginHeader = ({text,onPress}) =>{
-    return <View style = {styles.header}>
+    return <SafeAreaView style = {styles.header}>
         <TouchableOpacity onPress={onPress}>
             <Arrow />
         </TouchableOpacity>
         <Text style = {styles.text}>{text}</Text>
         <View></View>
-    </View>
+    </SafeAreaView>
 }
 const styles  = StyleSheet.create({
     header:{
@@ -17,6 +17,7 @@ const styles  = StyleSheet.create({
         justifyContent:'space-between',
         alignItems:'center',
         paddingHorizontal:20,
+        backgroundColor:"transparent"
     },
     text:{
         color:'#748189',

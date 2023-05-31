@@ -8,7 +8,6 @@ export const Button = ({text,width,height =42}) =>{
 
 const styles = StyleSheet.create({
     button:{
-        
         backgroundColor: "#40A789",
         borderRadius:6,
         justifyContent:'center',

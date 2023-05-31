@@ -27,11 +27,12 @@ export const Input = ({width = "100%",placeholder,secure,value,onChange}) =>{
 const styles = StyleSheet.create({
     input:{
         borderColor:"#748189",
-        borderBottomWidth:1,
+        borderBottomWidth:1.3,
         borderColor:'#748189',
         color:"#748189",
         paddingLeft:0,
         paddingVertical:0,
+        fontSize:18
     },
     password:{
         position:'absolute',

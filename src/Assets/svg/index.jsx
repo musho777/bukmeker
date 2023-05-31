@@ -92,3 +92,70 @@ export const RegBlock = ({title}) =>{
   </Svg>
   }
 }
+
+export const DropDownIcon = () =>{
+  return <Svg
+  width={14}
+  height={9}
+  viewBox="0 0 14 9"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <Path d="M1 1.5l6 6 6-6" stroke="#748189" strokeWidth={1.5} />
+</Svg>
+}
+
+export const NotChecked = () =>{
+  return    <Svg
+  width={18}
+  height={18}
+  viewBox="0 0 18 18"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <Rect
+    x={1}
+    y={1}
+    width={16}
+    height={16}
+    rx={2}
+    stroke="#BBC4C3"
+    strokeWidth={2}
+  />
+</Svg>
+}
+export const Info = () =>{
+  return <Svg
+  width={20}
+  height={20}
+  viewBox="0 0 20 20"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <Path
+    d="M9 8.98a1 1 0 012 0v6a1 1 0 01-2 0v-6zm1-4.929a1 1 0 100 2 1 1 0 000-2z"
+    fill="#40A789"
+  />
+  <Path
+    fillRule="evenodd"
+    clipRule="evenodd"
+    d="M10 0C4.477 0 0 4.477 0 10s4.477 10 10 10 10-4.477 10-10S15.523 0 10 0zM2 10a8 8 0 1016 0 8 8 0 00-16 0z"
+    fill="#40A789"
+  />
+</Svg>
+}
+
+export const CheckMark = () =>{
+  return <Svg
+  width={24}
+  height={18}
+  viewBox="0 0 24 18"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <Path
+    d="M8.53 17.5L.453 9.425l2.019-2.019 6.056 6.057L21.527.465l2.019 2.018L8.529 17.5z"
+    fill="#fff"
+  />
+</Svg>
+}

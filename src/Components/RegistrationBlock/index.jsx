@@ -1,8 +1,8 @@
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native"
 import { RegBlock } from "../../Assets/svg"
 
-export const RegistrationBlock = ({icon,text,title}) =>{
-    return <TouchableOpacity style = {styles.block}>
+export const RegistrationBlock = ({onPress,text,title}) =>{
+    return <TouchableOpacity onPress ={onPress} style = {styles.block}>
         <View style = {{marginHorizontal:15}}>
             <RegBlock  title = {title}/>
         </View>
