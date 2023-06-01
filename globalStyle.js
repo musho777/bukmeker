@@ -18,5 +18,5 @@ export const Globalstyles = StyleSheet.create({
     main:{
         marginTop:20,
         paddingHorizontal:15
-    }
+    },
 })

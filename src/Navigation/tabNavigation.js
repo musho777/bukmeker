@@ -1,9 +1,9 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { getFocusedRouteNameFromRoute } from '@react-navigation/native';
-import { MainPage } from '../Pages/MainPage';
 import { Cupone, Favorite, History, Menu, Popular } from '../Assets/svg';
 import { MainHeader } from '../Components/Headers/MainHeader';
 import { View } from 'react-native';
+import { Main } from '../Pages/Main';
 
 const Tab = createBottomTabNavigator();
 export default function NavigationMenu() {
@@ -33,21 +33,21 @@ export default function NavigationMenu() {
         >
             <Tab.Screen 
                 name="Main"
-                component={MainPage}
+                component={Main}
                 options={()=>({  
                     tabBarIcon:({focused})=> <Popular focused={focused} />
                 })}
             />
             <Tab.Screen 
                 name="favorite"
-                component={MainPage}
+                component={Main}
                 options={()=>({  
                     tabBarIcon:({focused})=> <Favorite focused={focused} />
                 })}
             />
              <Tab.Screen 
                 name="cupone"
-                component={MainPage}
+                component={Main}
                 options={()=>({  
                     tabBarIcon:({focused})=> <View style = {{marginTop:-30}}>
                         <Cupone focused={focused} />
@@ -56,14 +56,14 @@ export default function NavigationMenu() {
             />
             <Tab.Screen 
                 name="history"
-                component={MainPage}
+                component={Main}
                 options={()=>({  
                     tabBarIcon:({focused})=> <History focused={focused} />
                 })}
             />
             <Tab.Screen 
                 name="Menu"
-                component={MainPage}
+                component={Main}
                 options={()=>({  
                     tabBarIcon:({focused})=> <Menu focused={focused} />
                 })}

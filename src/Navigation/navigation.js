@@ -1,14 +1,9 @@
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import {LoginHeader} from '../Components/Headers/loginHeader';
-import { MainHeader } from '../Components/Headers/MainHeader';
 import { RegistrationWhite } from '../Components/RegistrationWhite';
 import {Login} from '../Pages/login';
-import { Main } from '../Components/Main';
 import {Registration} from '../Pages/registration';
-import { RegistrationWhiteFull } from '../Pages/RegistrationWhiteFull';
-import { RegistrationWhitePhone } from '../Pages/RegistrationWhitePhone';
-import { MainPage } from '../Pages/MainPage';
 import NavigationMenu from './tabNavigation';
 export default Navigation = () => {
   const Stack = createStackNavigator();
