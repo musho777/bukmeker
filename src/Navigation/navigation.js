@@ -9,6 +9,7 @@ import {Registration} from '../Pages/registration';
 import { RegistrationWhiteFull } from '../Pages/RegistrationWhiteFull';
 import { RegistrationWhitePhone } from '../Pages/RegistrationWhitePhone';
 import { MainPage } from '../Pages/MainPage';
+import NavigationMenu from './tabNavigation';
 export default Navigation = () => {
   const Stack = createStackNavigator();
   const MyTheme = {
@@ -21,7 +22,7 @@ export default Navigation = () => {
   };
   return (
     <NavigationContainer theme={MyTheme} >
-      <Stack.Navigator initialRouteName={'login'}>
+      <Stack.Navigator initialRouteName={'main'}>
         <Stack.Screen
           name="login"
           component={Login}
@@ -51,11 +52,11 @@ export default Navigation = () => {
         />
          <Stack.Screen
           name="main"
-          component={MainPage}
+          component={NavigationMenu}
           options={{
             headerTransparent: true,
-            header: ({navigation}) => (
-              <MainHeader />)
+            // header: ({navigation}) => (
+            //   <MainHeader />)
           }}
         />
       </Stack.Navigator>

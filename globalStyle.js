@@ -16,7 +16,7 @@ export const Globalstyles = StyleSheet.create({
         width:"100%",
     },
     main:{
-        marginTop:80,
+        marginTop:20,
         paddingHorizontal:15
     }
 })
