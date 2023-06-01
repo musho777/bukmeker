@@ -481,7 +481,6 @@ export const Stare = () =>{
 
 
 export const HorizontalGameScroll = ({name,active}) =>{
-  console.log(name,active)
   if(name === 'live'){
       if(active){
        return <Svg

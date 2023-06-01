@@ -11,7 +11,8 @@ const styles = StyleSheet.create({
         fontFamily:'Inter',
         fontWeight:500,
         fontSize:12,
-        color:'#748189'
+        color:'#748189',
+        marginRight:10,
     },
     k:{
         fontFamily:'Inter',
@@ -20,7 +21,7 @@ const styles = StyleSheet.create({
         color:'#2A2B2D'
     },
     block:{
-        width:71,
+        paddingHorizontal:10,
         height:34,
         backgroundColor:'#F5F6FA',
         borderRadius:8,
@@ -28,6 +29,5 @@ const styles = StyleSheet.create({
         flexDirection:'row',
         justifyContent:'space-between',
         alignItems:'center',
-        paddingHorizontal:5,
     }
 })

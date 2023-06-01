@@ -1,9 +1,10 @@
 import {View,StyleSheet,Text,ScrollView} from 'react-native'
+import { Globalstyles } from '../../../globalStyle'
 import { Player } from '../../Assets/svg'
 import { BlockHeader } from '../blockHeader'
 import { Coefficient } from '../coefficient'
 export const TennisLiveBlock = ({index}) =>{
-    return <View style = {[styles.block,index ===0 && {marginTop:20}]}>
+    return <View style = {[Globalstyles.sportBlock,index ===0 && {marginTop:20}]}>
         <BlockHeader name = {'АТР.Женева'} boll = {'tennis'} />
         <View style = {styles.timeBlock}>
             <Text style = {{color:'#748189',fontSize:10,fontFamily:"Inter",fontWeight:500}}>Итёт 2-ий сет</Text>
@@ -39,35 +40,35 @@ export const TennisLiveBlock = ({index}) =>{
         </View>
         <ScrollView horizontal showsHorizontalScrollIndicator = {false} style = {styles.coefficient}>
             <View>
-                <Text style ={styles.confficentTitle}>1X2</Text>
+                <Text style ={Globalstyles.confficentTitle}>1X2</Text>
                 <View style = {{flexDirection:'row'}}>
                     <Coefficient p = {'П1'} k = {'3.98'} />
                     <Coefficient p = {'П2'} k = {'1.256'} />
                 </View>
             </View>
             <View>
-                <Text style ={styles.confficentTitle}>Тотал</Text>
+                <Text style ={Globalstyles.confficentTitle}>Тотал</Text>
                 <View style = {{flexDirection:'row'}}>
                     <Coefficient p = {'(22.5) Б'} k = {'1.97'} />
                     <Coefficient p = {'(22.5) М'} k = {'1.8'} />
                 </View>
             </View>
             <View>
-                <Text style ={styles.confficentTitle}>1X2</Text>
+                <Text style ={Globalstyles.confficentTitle}>1X2</Text>
                 <View style = {{flexDirection:'row'}}>
                     <Coefficient p = {'П1'} k = {'3.98'} />
                     <Coefficient p = {'П1'} k = {'3.98'} />
                 </View>
             </View>
             <View>
-                <Text style ={styles.confficentTitle}>1X2</Text>
+                <Text style ={Globalstyles.confficentTitle}>1X2</Text>
                 <View style = {{flexDirection:'row'}}>
                     <Coefficient p = {'П1'} k = {'3.98'} />
                     <Coefficient p = {'П1'} k = {'3.98'} />
                 </View>
             </View>
             <View>
-                <Text style ={styles.confficentTitle}>1X2</Text>
+                <Text style ={Globalstyles.confficentTitle}>1X2</Text>
                 <View style = {{flexDirection:'row'}}>
                     <Coefficient p = {'П1'} k = {'3.98'} />
                     <Coefficient p = {'П1'} k = {'3.98'} />
@@ -77,22 +78,6 @@ export const TennisLiveBlock = ({index}) =>{
     </View>
 }
 const styles = StyleSheet.create({
-    block:{
-        width:'99%',
-        padding:10,
-        height:210,
-        backgroundColor:'#ffffff',
-        marginVertical:5,
-        shadowColor: "#000000",
-        shadowOffset: {
-        width: 0,
-        height: 3,
-        },
-        shadowOpacity:  0.17,
-        shadowRadius: 3.05,
-        elevation: 4,
-        borderRadius:8,
-    },
     timeBlock:{
         flexDirection:'row',
         justifyContent:'space-between',
@@ -111,13 +96,7 @@ const styles = StyleSheet.create({
         fontFamily:"Inter",
         fontWeight:500,
     },
-    confficentTitle:{
-        color:'#2A2B2D',
-        fontSize:12,
-        fontFamily:"Inter",
-        fontWeight:500,
-        marginBottom:5,
-    },
+    
     gamer:{
         height:70,
         flexDirection:'row',

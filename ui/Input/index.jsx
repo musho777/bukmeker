@@ -5,7 +5,6 @@ import { Eye } from "../../src/Assets/svg"
 export const Input = ({width = "100%",placeholder,secure,value,onChange}) =>{
     const [password,setPassword] = useState(secure)
     const showPassword = () =>{
-        console.log(password)
         setPassword(!password)
     }
     return <View style = {styles.inputWrapper}>

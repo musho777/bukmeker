@@ -1,8 +1,9 @@
 import {useState} from 'react'
-import { StyleSheet, View,ScrollView } from "react-native"
+import { StyleSheet, View,ScrollView,TouchableOpacity } from "react-native"
 import { Globalstyles } from "../../../globalStyle"
 import { Button } from "../../../ui/Button"
 import { FootBall, Live } from "../../Assets/svg"
+import { Football } from '../../Components/Football'
 import { GameType } from '../../Components/gameType'
 import { SportCategory } from "../../Components/sportCategory"
 import { Tennis } from '../../Components/Tennis'
@@ -29,12 +30,10 @@ export const Main = ({navigation}) =>{
         {name:'live'},
         {name:'live'},
         {name:'live'},
-        {name:'live'},
     ])
     const [active,setActive] = useState(0)
     const handelChange = (i) => {
         let item = [...game]
-        // const prevActive = item.findIndex()s
     }
     return <View style = {Globalstyles.main}>
         <View style = {styles.auth}>
@@ -48,12 +47,23 @@ export const Main = ({navigation}) =>{
         </ScrollView>
         <ScrollView style = {{borderBottomWidth:0.5,borderColor:'#40A789',marginBottom:0}} horizontal showsHorizontalScrollIndicator = {false}>
             {game.map((elm,i)=>{
-                return <GameType changeActive = {(e)=>setActive(e)} index = {i} key={i} active = {i === active} name = {elm.name}/>
+                return <TouchableOpacity key={i} onPress = {()=>setActive(i)}>
+                    <GameType 
+                        index = {i} 
+                        key={i} 
+                        active = {i === active} 
+                        name = {elm.name}/>
+                </TouchableOpacity>
             })
             }
         </ScrollView>
-            
-            <Tennis />
+
+            {active === 0 && 
+                <Tennis />
+            }
+            {active === 1 &&
+                <Football />
+            }
     </View>
 }
 const styles  = StyleSheet.create({

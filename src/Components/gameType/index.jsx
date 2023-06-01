@@ -1,11 +1,11 @@
-import {View,StyleSheet,TouchableOpacity} from 'react-native'
+import {View,StyleSheet} from 'react-native'
 import { HorizontalGameScroll } from '../../Assets/svg'
-export const GameType = ({name,active,changeActive,index}) =>{
-    console.log(active)
-    return <TouchableOpacity onPress={()=>changeActive(index)} style = {[styles.block]}>
+export const GameType = ({name,active}) =>{
+    console.log(active,88)
+    return <View  style = {[styles.block]}>
         <HorizontalGameScroll name = {name} active = {active} />
         <View style = {active && styles.active} />
-    </TouchableOpacity>
+    </View>
 }
 const styles = StyleSheet.create({
     block:{
@@ -14,7 +14,6 @@ const styles = StyleSheet.create({
         justifyContent:'center',
         alignItems:'center',
         marginBottom:25,
-        // marginVertical:25,
         position:'relative',
     },
     active:{
@@ -22,7 +21,6 @@ const styles = StyleSheet.create({
         borderBottomWidth:1.7,
         width:50,
         position:'absolute',
-        bottom:-6,
-        // paddingTop:10,
+        bottom:-1,
     }
 })
