@@ -5,6 +5,7 @@ import { Button } from "../../../ui/Button"
 import { FootBall, Live } from "../../Assets/svg"
 import { Esports } from '../../Components/esports'
 import { Football } from '../../Components/Football'
+import { Games } from '../../Components/Games'
 import { GameType } from '../../Components/gameType'
 import { SportCategory } from "../../Components/sportCategory"
 import { Tennis } from '../../Components/Tennis'
@@ -58,7 +59,6 @@ export const Main = ({navigation}) =>{
             })
             }
         </ScrollView>
-
             {active === 0 && 
                 <Tennis />
             }
@@ -67,6 +67,9 @@ export const Main = ({navigation}) =>{
             }
             {active === 2 &&    
                 <Esports />
+            }
+            {active === 3 &&    
+                <Games />
             }
     </View>
 }
