@@ -8,8 +8,8 @@ export const GameType = ({name,active}) =>{
 }
 const styles = StyleSheet.create({
     block:{
-        height:50,
-        width:50,
+        height:70,
+        width:65,
         justifyContent:'center',
         alignItems:'center',
         marginBottom:25,
@@ -18,8 +18,8 @@ const styles = StyleSheet.create({
     active:{
         borderBottomColor:'#40A789',
         borderBottomWidth:1.7,
-        width:50,
+        width:65,
         position:'absolute',
-        bottom:-1,
+        bottom:6,
     }
 })

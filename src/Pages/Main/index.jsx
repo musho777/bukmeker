@@ -7,6 +7,7 @@ import { Esports } from '../../Components/esports'
 import { Football } from '../../Components/Football'
 import { Games } from '../../Components/Games'
 import { GameType } from '../../Components/gameType'
+import { LiveCasion } from '../../Components/LiveCazino'
 import { Slots } from '../../Components/Slots'
 import { SportCategory } from "../../Components/sportCategory"
 import { Tennis } from '../../Components/Tennis'
@@ -29,7 +30,7 @@ export const Main = ({navigation}) =>{
         {name:'Esports'},
         {name:'Games'},
         {name:'Слоты'},
-        {name:'live'},
+        {name:'Лайв казино'},
         {name:'live'},
         {name:'live'},
         {name:'live'},
@@ -75,8 +76,12 @@ export const Main = ({navigation}) =>{
             {active === 4 &&    
                 <Slots />
             }
+            {active === 5 &&    
+                <LiveCasion />
+            }
     </View>
 }
+// LiveCasion
 const styles  = StyleSheet.create({
     auth:{
         flexDirection:'row',

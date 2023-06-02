@@ -1,8 +1,8 @@
-import { ScrollView} from "react-native"
+import { StyleSheet, View,Text,ScrollView } from "react-native"
 import { GamesBlcok } from "../GamesBlock"
 import { SlotsBlock } from "../SlotsBlock"
 
-export const Slots = () =>{
+export const LiveCasion = () =>{
     const data = [{},{},{},{},{},{},]
     const data2 = [{},{},{},{},{},{},]
     return <ScrollView showsVerticalScrollIndicator = {false} style = {{marginBottom:238}}>
