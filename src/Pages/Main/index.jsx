@@ -3,6 +3,7 @@ import { StyleSheet, View,ScrollView,TouchableOpacity } from "react-native"
 import { Globalstyles } from "../../../globalStyle"
 import { Button } from "../../../ui/Button"
 import { FootBall, Live } from "../../Assets/svg"
+import { Esports } from '../../Components/esports'
 import { Football } from '../../Components/Football'
 import { GameType } from '../../Components/gameType'
 import { SportCategory } from "../../Components/sportCategory"
@@ -63,6 +64,9 @@ export const Main = ({navigation}) =>{
             }
             {active === 1 &&
                 <Football />
+            }
+            {active === 2 &&    
+                <Esports />
             }
     </View>
 }

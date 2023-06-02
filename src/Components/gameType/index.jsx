@@ -1,7 +1,6 @@
 import {View,StyleSheet} from 'react-native'
 import { HorizontalGameScroll } from '../../Assets/svg'
 export const GameType = ({name,active}) =>{
-    console.log(active,88)
     return <View  style = {[styles.block]}>
         <HorizontalGameScroll name = {name} active = {active} />
         <View style = {active && styles.active} />
