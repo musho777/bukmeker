@@ -16,6 +16,7 @@ export const AnimatedList = ({icone,name,data}) =>{
         </TouchableOpacity>
         {open && <View>
             <CsGoBlcok />
+            <CsGoBlcok />
         </View>}
     </View>
 }

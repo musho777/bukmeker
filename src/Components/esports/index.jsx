@@ -21,13 +21,17 @@ export const Esports = () =>{
             })}
         </ScrollView>
         <View style = {{flexDirection:'row',alignItems:'center'}}>
-                <View><Popular2/></View>
-                <View style = {[{marginHorizontal:10,alignItems:'center',flexDirection:'row'}]}>
-                    <Text style = {[styles.text,{marginHorizontal:10}]}>Популярное LIVE</Text> 
-                    <LiveIcone />
-                </View>
+            <View><Popular2/></View>
+            <View style = {[{marginHorizontal:10,alignItems:'center',flexDirection:'row'}]}>
+                <Text style = {[styles.text,{marginHorizontal:10}]}>Популярное LIVE</Text> 
+                <LiveIcone />
+            </View>
         </View>
         <View>
+            <AnimatedList />
+            <AnimatedList />
+            <AnimatedList />
+            <AnimatedList />
             <AnimatedList />
         </View>
     </ScrollView>
