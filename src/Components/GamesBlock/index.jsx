@@ -3,9 +3,8 @@ import { ScrollView } from 'react-native-gesture-handler'
 import { Globalstyles } from '../../../globalStyle'
 import { Bolls } from '../../Assets/svg'
 import { All } from '../all'
-import { GameCard } from '../GameCard/GameCard'
 
-export const GamesBlcok = ({index}) =>{
+export const GamesBlcok = ({index,children}) =>{
     const data = [{},{},{},{},{},{}]
     return <View style = {[Globalstyles.sportBlock,index === 0 && {marginTop:20}]}>
         <View style = {style.header}>
@@ -16,10 +15,7 @@ export const GamesBlcok = ({index}) =>{
             <All />
         </View>
         <ScrollView horizontal showsHorizontalScrollIndicator = {false}>
-            {data.map((elm,i)=>{
-                return <GameCard key={i} name = {'Crystal'}/>
-
-            })}
+            {children}
         </ScrollView>
     </View>
 }

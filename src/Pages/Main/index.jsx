@@ -7,6 +7,7 @@ import { Esports } from '../../Components/esports'
 import { Football } from '../../Components/Football'
 import { Games } from '../../Components/Games'
 import { GameType } from '../../Components/gameType'
+import { Slots } from '../../Components/Slots'
 import { SportCategory } from "../../Components/sportCategory"
 import { Tennis } from '../../Components/Tennis'
 
@@ -24,10 +25,10 @@ export const Main = ({navigation}) =>{
     ])
     const [game,setGame] = useState([
         {name:'live'},
-        {name:'live'},
-        {name:'live'},
-        {name:'live'},
-        {name:'live'},
+        {name:'Линия'},
+        {name:'Esports'},
+        {name:'Games'},
+        {name:'Слоты'},
         {name:'live'},
         {name:'live'},
         {name:'live'},
@@ -70,6 +71,9 @@ export const Main = ({navigation}) =>{
             }
             {active === 3 &&    
                 <Games />
+            }
+            {active === 4 &&    
+                <Slots />
             }
     </View>
 }
