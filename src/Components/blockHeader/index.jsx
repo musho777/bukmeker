@@ -1,6 +1,6 @@
 import {View,StyleSheet,Text,TouchableOpacity} from 'react-native'
-import { Bells, Bolls, Stare } from '../../Assets/svg'
-export const BlockHeader = ({name,boll}) =>{
+import { Bells, Bolls, Play, Stare } from '../../Assets/svg'
+export const BlockHeader = ({name,boll,type ='stare'}) =>{
     return <View style = {styles.block}>
         <View style  = {styles.title}>
             <Bolls name = {boll}/>
@@ -10,8 +10,11 @@ export const BlockHeader = ({name,boll}) =>{
             <TouchableOpacity style = {{marginHorizontal:15}}>
                 <Bells />
             </TouchableOpacity>
-            <TouchableOpacity > 
-                <Stare />
+            <TouchableOpacity >
+                {type ==='stare' ?
+                    <Stare />:
+                    <Play />
+                } 
             </TouchableOpacity>
         </View>
     </View>

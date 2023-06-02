@@ -22,7 +22,7 @@ export const FootballBlock = ({index}) =>{
             <Text style = {styles.date}>05 : 04 : 06</Text>
             <Text style = {styles.date2}>26.05.23 10:45 PM</Text>
         </View>
-        <ScrollView horizontal showsHorizontalScrollIndicator = {false} style = {styles.coefficient}>
+        <ScrollView horizontal showsHorizontalScrollIndicator = {false} >
             <View>
                 <Text style ={Globalstyles.confficentTitle}>1X2</Text>
                 <View style = {{flexDirection:'row'}}>

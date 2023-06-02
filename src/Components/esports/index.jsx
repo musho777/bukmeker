@@ -1,5 +1,6 @@
 import { View,ScrollView, Text, StyleSheet } from "react-native"
 import { Gamepad, LiveIcone, Popular2 } from "../../Assets/svg"
+import { AnimatedList } from "../animatedList"
 import { CsGo } from "../CsGo"
 
 export const Esports = () =>{
@@ -25,7 +26,10 @@ export const Esports = () =>{
                     <Text style = {[styles.text,{marginHorizontal:10}]}>Популярное LIVE</Text> 
                     <LiveIcone />
                 </View>
-            </View>
+        </View>
+        <View>
+            <AnimatedList />
+        </View>
     </ScrollView>
 }
 export const styles = StyleSheet.create({
