@@ -4,15 +4,15 @@ import { Cupone, Favorite, History, Menu, Popular } from '../Assets/svg';
 import { MainHeader } from '../Components/Headers/MainHeader';
 import { View } from 'react-native';
 import { Main } from '../Pages/Main';
+import { createStackNavigator } from '@react-navigation/stack';
+import PopularNavigation from './popularNavigation';
 
 const Tab = createBottomTabNavigator();
 export default function NavigationMenu() {
     return (
         <Tab.Navigator 
         screenOptions = {({route})=> ({
-            header: ({navigation}) => (
-                <MainHeader navigation = {navigation} onPress={() => navigation.goBack()}  />
-              ),
+           headerShown:false,
             tabBarShowLabel: false,
             tabBarStyle: ( () => { 
                 const routeName = getFocusedRouteNameFromRoute(route) ?? ''
@@ -32,8 +32,8 @@ export default function NavigationMenu() {
         })}
         >
             <Tab.Screen 
-                name="Main"
-                component={Main}
+                name="MainPage"
+                component={PopularNavigation}
                 options={()=>({  
                     tabBarIcon:({focused})=> <Popular focused={focused} />
                 })}

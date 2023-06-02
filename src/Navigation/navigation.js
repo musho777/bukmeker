@@ -50,8 +50,6 @@ export default Navigation = () => {
           component={NavigationMenu}
           options={{
             headerTransparent: true,
-            // header: ({navigation}) => (
-            //   <MainHeader />)
           }}
         />
       </Stack.Navigator>

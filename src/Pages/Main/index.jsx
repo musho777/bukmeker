@@ -2,7 +2,7 @@ import {useState} from 'react'
 import { StyleSheet, View,ScrollView,TouchableOpacity } from "react-native"
 import { Globalstyles } from "../../../globalStyle"
 import { Button } from "../../../ui/Button"
-import { FootBall, Live } from "../../Assets/svg"
+import { All, FootBall, Live } from "../../Assets/svg"
 import { Esports } from '../../Components/esports'
 import { Football } from '../../Components/Football'
 import { Games } from '../../Components/Games'
@@ -14,7 +14,7 @@ import { Tennis } from '../../Components/Tennis'
 
 export const Main = ({navigation}) =>{
     const [categroy,setCategory] = useState([
-        {svg:<FootBall />,name:'Футбол'},
+        {svg:<All />,name:'Все'},
         {svg:<FootBall />,name:'Футбол'},
         {svg:<FootBall />,name:'Футбол'},
         {svg:<FootBall />,name:'Футбол'},
