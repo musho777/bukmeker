@@ -2,8 +2,8 @@ import { StyleSheet, View,ScrollView,TouchableOpacity,Text } from "react-native"
 import { Globalstyles } from "../../../globalStyle"
 import { Bolls } from "../../Assets/svg"
 
-export const HorizontalBlock = ({title,count,icone}) =>{
-    return <TouchableOpacity style = {Globalstyles.sportBlock2}>
+export const HorizontalBlock = ({title,count,icone,navigation}) =>{
+    return <TouchableOpacity style = {Globalstyles.sportBlock2} onPress={()=>navigation.navigate('Sport', {title: title,svg:icone})}>
         <View style = {{flexDirection:'row',alignItems:'center'}}>
             <Bolls name={icone} />
             <Text style = {styles.title}>{title}</Text>

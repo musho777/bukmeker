@@ -2,9 +2,9 @@ import { StyleSheet, View,ScrollView,TouchableOpacity,Text } from "react-native"
 import {useState} from 'react'
 import { HorizontalBlock } from "../../Components/horizontalBlock"
 
-export const All = () =>{
+export const All = ({navigation}) =>{
     const data = [
-        {icone:'football',title:'Футбол',count:'120'},
+        {icone:'football',title:'Футбол',count:'120',},
         {icone:'football',title:'Футбол',count:'120'},
         {icone:'football',title:'Футбол',count:'120'},
         {icone:'football',title:'Футбол',count:'120'},
@@ -19,7 +19,7 @@ export const All = () =>{
     const [active,setActive ] = useState(0)
     return <View >
          <View style = {styles.header}>
-           <TouchableOpacity onPress={()=>setActive(0)}> 
+           <TouchableOpacity  onPress={()=>setActive(0)}> 
                 <Text style = {[styles.text,active === 0 && styles.active]}>LIVE</Text>
             </TouchableOpacity>
            <TouchableOpacity onPress={()=>setActive(1)}>
@@ -33,7 +33,7 @@ export const All = () =>{
         <ScrollView style = {{marginTop:10,paddingHorizontal:7}} showsHorizontalScrollIndicator = {false}>
             {data.map((elm,i)=>(
                 <View key={i} style = {[{alignItems:'center'},(i ===data.length-1 &&{marginBottom:70})]} >
-                    <HorizontalBlock icone={'football'} title={'Футбол'} count = {120} />
+                    <HorizontalBlock navigation= {navigation} icone={'football'} title={'Футбол'} count = {120} />
                 </View>
             ))}
         </ScrollView>

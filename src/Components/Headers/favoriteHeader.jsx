@@ -1,11 +1,13 @@
 import { Text, View,ImageBackground,StyleSheet, TouchableOpacity } from "react-native"
 import { OpenEye } from "../../Assets/svg"
 
-export const FavoriteHeader = () =>{
+export const FavoriteHeader = ({navigation}) =>{
     return <View style = {styles.header}>
         <View />
         <Text style = {styles.text}>Избранное</Text>
-        <OpenEye />
+        <TouchableOpacity onPress={()=>navigation.navigate('Tracked')}>
+            <OpenEye />
+        </TouchableOpacity>
     </View>
 }
 
