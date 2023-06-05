@@ -6,7 +6,6 @@ import { View } from 'react-native';
 import { Main } from '../Pages/Main';
 import { createStackNavigator } from '@react-navigation/stack';
 import PopularNavigation from './popularNavigation';
-import { Football } from '../Pages/Football';
 
 const Tab = createBottomTabNavigator();
 export default function NavigationMenu() {

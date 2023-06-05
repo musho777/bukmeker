@@ -13,11 +13,6 @@ export const AlltypesHeader = ({onPress}) =>{
                 <Live />
             </View>
         </View>
-        {/* <View style = {styles.header2}>
-            <Text style = {[styles.text,styles.active]}>LIVE</Text>
-            <Text style = {[styles.text]}>Линия</Text>
-            <Text style = {[styles.text]}>Киберы</Text>
-        </View> */}
     </View>
 }
 
@@ -39,7 +34,7 @@ const styles  = StyleSheet.create({
         justifyContent:'space-between',
         paddingHorizontal:10,
         width:'100%',
-        marginTop:10,
+        marginTop:15,
         alignItems:'center',
         height:25,
     },

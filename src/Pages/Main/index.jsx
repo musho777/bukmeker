@@ -15,7 +15,7 @@ import { Tennis } from '../../Components/Tennis'
 export const Main = ({navigation}) =>{
     const [categroy,setCategory] = useState([
         {svg:<All />,name:'Все',title:'All'},
-        {svg:<FootBall />,name:'Футбол',title:'Football'},
+        {svg:<FootBall />,name:'Футбол',title:'Sport',title2:'football'},
         {svg:<FootBall />,name:'Футбол'},
         {svg:<FootBall />,name:'Футбол'},
         {svg:<FootBall />,name:'Футбол'},
@@ -46,7 +46,7 @@ export const Main = ({navigation}) =>{
         </View>
         <ScrollView style = {styles.horizontalScroll} horizontal showsHorizontalScrollIndicator = {false}>
             {categroy.map((elm,i)=>{
-                return  <SportCategory navigation = {navigation} title = {elm.title} key={i} svg = {elm.svg } name = {elm.name} />
+                return  <SportCategory title2 = {elm.title2} navigation = {navigation} title = {elm.title} key={i} svg = {elm.svg } name = {elm.name} />
             })}
         </ScrollView>
         <ScrollView style = {{borderBottomWidth:0.5,borderColor:'#40A789',marginBottom:0}} horizontal showsHorizontalScrollIndicator = {false}>

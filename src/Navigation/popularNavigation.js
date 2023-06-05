@@ -2,8 +2,8 @@ import {createStackNavigator} from '@react-navigation/stack';
 import { AlltypesHeader } from '../Components/Headers/allTypesHeader';
 import { MainHeader } from '../Components/Headers/MainHeader';
 import { All } from '../Pages/AllPage';
-import { Football } from '../Pages/Football';
 import { Main } from '../Pages/Main';
+import { Sport } from '../Pages/Sport';
 export default PopularNavigation = () => {
   const Stack = createStackNavigator();
   return (
@@ -27,7 +27,16 @@ export default PopularNavigation = () => {
                     header:({navigation})=>{
                       return <AlltypesHeader navigation = {navigation} />
                     }
-                    // tabBarIcon:({focused})=> <Menu focused={focused} />
+                })}
+            />
+            <Stack.Screen 
+                name="Sport"
+                component={Sport}
+                options={()=>({  
+                    title:'',
+                    header:({navigation})=>{
+                      return <AlltypesHeader navigation = {navigation} />
+                    }
                 })}
             />
       </Stack.Navigator>

@@ -1,6 +1,6 @@
 import {View,StyleSheet,Text, TouchableOpacity} from 'react-native'
-export const SportCategory = ({svg,name,navigation,title}) =>{
-    return <TouchableOpacity style = {styles.block} onPress={()=>navigation.navigate(title)}>
+export const SportCategory = ({svg,name,navigation,title,title2}) =>{
+    return <TouchableOpacity style = {styles.block} onPress={()=>navigation.navigate(title, {title: name,svg:title2})}>
         <View style = {styles.svg}>
             {svg}
             <Text style = {styles.name}>{name}</Text>

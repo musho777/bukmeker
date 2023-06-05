@@ -1,8 +1,9 @@
 import { StyleSheet, View,ScrollView,TouchableOpacity,Text } from "react-native"
+import { Globalstyles } from "../../../globalStyle"
 import { Bolls } from "../../Assets/svg"
 
 export const HorizontalBlock = ({title,count,icone}) =>{
-    return <TouchableOpacity style = {styles.block}>
+    return <TouchableOpacity style = {Globalstyles.sportBlock2}>
         <View style = {{flexDirection:'row',alignItems:'center'}}>
             <Bolls name={icone} />
             <Text style = {styles.title}>{title}</Text>
@@ -11,25 +12,7 @@ export const HorizontalBlock = ({title,count,icone}) =>{
     </TouchableOpacity>
 }
 const styles = StyleSheet.create({
-    block:{
-        width:'98%',
-        flexDirection:'row',
-        alignItems:'center',
-        justifyContent:'space-between',
-        paddingHorizontal:10,
-        shadowColor: "#000000",
-        shadowOffset: {
-            width: 0,
-            height: 2,
-        },
-        shadowOpacity:  0.17,
-        shadowRadius: 3.05,
-        elevation: 4,
-        height:60,
-        backgroundColor:'#ffffff',
-        marginVertical:2,
-        borderRadius:15,
-    },
+
     count:{
         color:'#748189',
         fontFamily:'Inter',
