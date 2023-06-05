@@ -6,6 +6,7 @@ import { View } from 'react-native';
 import { Main } from '../Pages/Main';
 import { createStackNavigator } from '@react-navigation/stack';
 import PopularNavigation from './popularNavigation';
+import { Football } from '../Pages/Football';
 
 const Tab = createBottomTabNavigator();
 export default function NavigationMenu() {
@@ -68,7 +69,15 @@ export default function NavigationMenu() {
                     tabBarIcon:({focused})=> <Menu focused={focused} />
                 })}
             />
+            {/* <Tab.Screen 
+                name="Football"
+                component={Football}
+                options={()=>({  
+                    tabBarIcon:({focused})=> <Menu focused={focused} />
+                })}
+            /> */}
         </Tab.Navigator>
 
     )
 }   
+// Football

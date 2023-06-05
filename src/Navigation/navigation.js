@@ -49,6 +49,7 @@ export default Navigation = () => {
           name="main"
           component={NavigationMenu}
           options={{
+            headerShown:false,
             headerTransparent: true,
           }}
         />

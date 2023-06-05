@@ -2,7 +2,7 @@ import {useState} from 'react'
 import { StyleSheet, View,ScrollView,TouchableOpacity } from "react-native"
 import { Globalstyles } from "../../../globalStyle"
 import { Button } from "../../../ui/Button"
-import { All, FootBall, Live } from "../../Assets/svg"
+import { All, FootBall } from "../../Assets/svg"
 import { Esports } from '../../Components/esports'
 import { Football } from '../../Components/Football'
 import { Games } from '../../Components/Games'
@@ -14,8 +14,8 @@ import { Tennis } from '../../Components/Tennis'
 
 export const Main = ({navigation}) =>{
     const [categroy,setCategory] = useState([
-        {svg:<All />,name:'Все'},
-        {svg:<FootBall />,name:'Футбол'},
+        {svg:<All />,name:'Все',title:'All'},
+        {svg:<FootBall />,name:'Футбол',title:'Football'},
         {svg:<FootBall />,name:'Футбол'},
         {svg:<FootBall />,name:'Футбол'},
         {svg:<FootBall />,name:'Футбол'},
@@ -46,7 +46,7 @@ export const Main = ({navigation}) =>{
         </View>
         <ScrollView style = {styles.horizontalScroll} horizontal showsHorizontalScrollIndicator = {false}>
             {categroy.map((elm,i)=>{
-                return  <SportCategory key={i} svg = {elm.svg } name = {elm.name} />
+                return  <SportCategory navigation = {navigation} title = {elm.title} key={i} svg = {elm.svg } name = {elm.name} />
             })}
         </ScrollView>
         <ScrollView style = {{borderBottomWidth:0.5,borderColor:'#40A789',marginBottom:0}} horizontal showsHorizontalScrollIndicator = {false}>

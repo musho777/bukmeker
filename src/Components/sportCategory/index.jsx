@@ -1,12 +1,12 @@
-import {View,StyleSheet,Text} from 'react-native'
-export const SportCategory = ({svg,name}) =>{
-    return <View style = {styles.block}>
+import {View,StyleSheet,Text, TouchableOpacity} from 'react-native'
+export const SportCategory = ({svg,name,navigation,title}) =>{
+    return <TouchableOpacity style = {styles.block} onPress={()=>navigation.navigate(title)}>
         <View style = {styles.svg}>
             {svg}
             <Text style = {styles.name}>{name}</Text>
         </View>
 
-    </View>
+    </TouchableOpacity>
 }
 const styles = StyleSheet.create({
     block:{
