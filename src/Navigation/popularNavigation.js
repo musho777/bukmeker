@@ -25,7 +25,7 @@ export default PopularNavigation = () => {
                 options={()=>({  
                     title:'',
                     header:({navigation})=>{
-                      return <AlltypesHeader navigation = {navigation} />
+                      return <AlltypesHeader goBack = {()=>navigation.goBack()} navigation = {navigation} />
                     }
                 })}
             />
@@ -35,7 +35,7 @@ export default PopularNavigation = () => {
                 options={()=>({  
                     title:'',
                     header:({navigation})=>{
-                      return <AlltypesHeader navigation = {navigation} />
+                      return <AlltypesHeader goBack = {()=>navigation.goBack()} navigation = {navigation} />
                     }
                 })}
             />

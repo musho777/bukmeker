@@ -6,6 +6,9 @@ import { View } from 'react-native';
 import { Main } from '../Pages/Main';
 import { createStackNavigator } from '@react-navigation/stack';
 import PopularNavigation from './popularNavigation';
+import { Favorites } from '../Pages/Favorites';
+import { FavoriteHeader } from '../Components/Headers/favoriteHeader';
+import favoriteNavigation from './favoriteNavigation';
 
 const Tab = createBottomTabNavigator();
 export default function NavigationMenu() {
@@ -39,8 +42,8 @@ export default function NavigationMenu() {
                 })}
             />
             <Tab.Screen 
-                name="favorite"
-                component={Main}
+                name="favoritePage"
+                component={favoriteNavigation}
                 options={()=>({  
                     tabBarIcon:({focused})=> <Favorite focused={focused} />
                 })}

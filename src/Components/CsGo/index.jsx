@@ -1,7 +1,6 @@
 import { Image, StyleSheet, Text, View } from "react-native"
 
-export const CsGo = ({name,img}) =>{
-    // console.log(img)
+export const CsGo = ({name}) =>{
     return <View style = {styles.block}>
         <Image style = {styles.images} source = {require('../../Assets/images/csgo.png')} />
         <Text style = {styles.text}>{name}</Text>

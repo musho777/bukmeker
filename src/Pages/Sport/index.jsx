@@ -60,6 +60,14 @@ const styles = StyleSheet.create({
         justifyContent:'space-around',
         alignItems:'center',
         paddingVertical:10,
+        shadowColor: "#000000",
+        shadowOffset: {
+        width: 0,
+        height: 3,
+        },
+        shadowOpacity:  0.18,
+        shadowRadius: 4.59,
+        elevation: 5
     },
     active:{
         color:'#40A789',

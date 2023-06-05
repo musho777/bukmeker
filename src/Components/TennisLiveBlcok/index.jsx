@@ -3,7 +3,7 @@ import { Globalstyles } from '../../../globalStyle'
 import { Player } from '../../Assets/svg'
 import { BlockHeader } from '../blockHeader'
 import { Coefficient } from '../coefficient'
-export const TennisLiveBlock = ({index}) =>{
+export const TennisLiveBlock = ({index,lastIndex}) =>{
     return <View style = {[Globalstyles.sportBlock,index ===0 && {marginTop:20}]}>
         <BlockHeader name = {'АТР.Женева'} boll = {'tennis'} />
         <View style = {styles.timeBlock}>

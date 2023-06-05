@@ -17,7 +17,7 @@ export const Globalstyles = StyleSheet.create({
     },
     main:{
         marginTop:20,
-        paddingHorizontal:15
+        paddingHorizontal:10
     },
     sportBlock:{
         width:'99%',

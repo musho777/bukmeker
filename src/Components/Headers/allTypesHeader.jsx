@@ -1,16 +1,26 @@
+import { useState } from "react"
 import { StyleSheet, View,TouchableOpacity,Text } from "react-native"
 import {  } from "react-native-svg"
+import { SearchInpute } from "../../../ui/Input/searchInpute"
 import { Arrow, Live, Search, Touch } from "../../Assets/svg"
 
-export const AlltypesHeader = ({onPress}) =>{
+export const AlltypesHeader = ({onPress,goBack}) =>{
+    const [openSearch,setOpenSearch] = useState(false)
     return <View style = {styles.header}>
         <View style = {styles.header1}>
-            <TouchableOpacity style = {styles.arrow} onPress={onPress}><Arrow /></TouchableOpacity>
-            <Text style = {styles.title}>Виды спорта</Text>
+            <TouchableOpacity  style = {styles.arrow} onPress={goBack}><Arrow /></TouchableOpacity>
+            {!openSearch && <Text style = {styles.title}>Виды спорта</Text>}
+            {openSearch && <SearchInpute />}
             <View style = {styles.icone}>
-                <Search />
-                <Touch/>
-                <Live />
+                {!openSearch && <TouchableOpacity>
+                    <Search />
+                </TouchableOpacity>}
+                <TouchableOpacity>
+                    <Touch/>
+                </TouchableOpacity>
+                <TouchableOpacity>
+                    <Live />
+                </TouchableOpacity>
             </View>
         </View>
     </View>
@@ -21,6 +31,7 @@ const styles  = StyleSheet.create({
         backgroundColor:"#FFFFFF",
         height:50,
         width:'100%',
+       
     },
     title:{
         color:'#748189',
