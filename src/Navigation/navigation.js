@@ -4,6 +4,7 @@ import {LoginHeader} from '../Components/Headers/loginHeader';
 import { RegistrationWhite } from '../Components/RegistrationWhite';
 import {Login} from '../Pages/login';
 import {Registration} from '../Pages/registration';
+
 import NavigationMenu from './tabNavigation';
 export default Navigation = () => {
   const Stack = createStackNavigator();

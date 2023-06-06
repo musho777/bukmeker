@@ -5,6 +5,7 @@ import { SearchHeader } from '../Components/Headers/searchHeader';
 import { Search } from '../Pages/Search';
 import { GenereateTicket } from '../Pages/GenearateTicket';
 import { GenereateTicketHeader } from '../Components/Headers/genereateTicket';
+import { BootomModal } from '../Components/BootomSheet';
 export default CuponeNavigation = () => {
   const Stack = createStackNavigator();
   return (

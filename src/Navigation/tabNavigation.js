@@ -1,19 +1,18 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { getFocusedRouteNameFromRoute } from '@react-navigation/native';
 import { Cupone, Favorite, History, Menu, Popular } from '../Assets/svg';
-import { MainHeader } from '../Components/Headers/MainHeader';
 import { View } from 'react-native';
 import { Main } from '../Pages/Main';
-import { createStackNavigator } from '@react-navigation/stack';
 import PopularNavigation from './popularNavigation';
-import { Favorites } from '../Pages/Favorites';
-import { FavoriteHeader } from '../Components/Headers/favoriteHeader';
 import favoriteNavigation from './favoriteNavigation';
 import cuponeNavigation from './cuponeNavigation';
+import {BottomSheetModalProvider} from '@gorhom/bottom-sheet';
+
 
 const Tab = createBottomTabNavigator();
 export default function NavigationMenu() {
     return (
+    <BottomSheetModalProvider>
         <Tab.Navigator 
         screenOptions = {({route})=> ({
            headerShown:false,
@@ -72,15 +71,9 @@ export default function NavigationMenu() {
                     tabBarIcon:({focused})=> <Menu focused={focused} />
                 })}
             />
-            {/* <Tab.Screen 
-                name="Football"
-                component={Football}
-                options={()=>({  
-                    tabBarIcon:({focused})=> <Menu focused={focused} />
-                })}
-            /> */}
         </Tab.Navigator>
-
+        </BottomSheetModalProvider>
+        
     )
 }   
 // Football
