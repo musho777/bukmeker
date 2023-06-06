@@ -22,7 +22,7 @@ export const Globalstyles = StyleSheet.create({
     sportBlock:{
         width:'99%',
         padding:10,
-        height:210,
+        height:190,
         backgroundColor:'#ffffff',
         marginVertical:5,
         shadowColor: "#000000",

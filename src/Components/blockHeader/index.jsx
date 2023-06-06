@@ -7,21 +7,21 @@ export const BlockHeader = ({name,boll,type ='stare'}) =>{
             <Text style = {styles.text}>{name}</Text>
         </View>
         <View style = {styles.svg}>
-            <TouchableOpacity style = {{marginHorizontal:15}}>
-                <Bells />
+            <TouchableOpacity style = {{marginHorizontal:10}}>
+                {type ==='stare' ?
+                    <Bells />:
+                    <Play />
+                }
             </TouchableOpacity>
             <TouchableOpacity >
-                {type ==='stare' ?
-                    <Stare />:
-                    <Play />
-                } 
+                <Stare />
             </TouchableOpacity>
         </View>
     </View>
 }
 const styles  = StyleSheet.create({
     block:{
-        height:35,
+        // height:25,
         alignItems:'center',
         flexDirection:'row',
         justifyContent:'space-between',

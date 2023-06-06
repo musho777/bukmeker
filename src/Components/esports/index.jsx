@@ -5,7 +5,7 @@ import { CsGo } from "../CsGo"
 
 export const Esports = () =>{
     const data = [{},{},{},{},{},{},{},{}]
-    return <ScrollView showsVerticalScrollIndicator = {false} style = {{marginBottom:238}} >
+    return <ScrollView showsVerticalScrollIndicator = {false} style = {{marginBottom:253}} >
         <View style = {{marginTop:20,flexDirection:'row',alignItems:'center',justifyContent:'space-between'}}>
             <View style = {{flexDirection:'row',alignItems:'center'}}>
                 <View><Gamepad/></View>

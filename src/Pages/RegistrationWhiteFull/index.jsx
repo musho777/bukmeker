@@ -92,7 +92,7 @@ export const RegistrationWhiteFull = () =>{
                         buttonStyle = {[styles.DropDownStyle,{width:70}]}
                     /> */}
                 </View>
-                <Input placeholder={'Номер телефона*'} width={width-180}/>
+                <Input type="numeric" placeholder={'Номер телефона*'} width={width-180}/>
             </View>
             <View style = {[styles.InputWrapper,{marginTop:30}]}>
                 <Number number={10}/>

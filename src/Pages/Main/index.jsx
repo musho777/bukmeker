@@ -58,8 +58,7 @@ export const Main = ({navigation}) =>{
                         active = {i === active} 
                         name = {elm.name}/>
                 </TouchableOpacity>
-            })
-            }
+            })}
         </ScrollView>
             {active === 0 && 
                 <Tennis />
@@ -81,7 +80,6 @@ export const Main = ({navigation}) =>{
             }
     </View>
 }
-// LiveCasion
 const styles  = StyleSheet.create({
     auth:{
         flexDirection:'row',
@@ -89,7 +87,7 @@ const styles  = StyleSheet.create({
         alignItems:'center',
     },
     horizontalScroll:{
-        marginTop:20,
+        marginTop:15,
         height:100,
         flexDirection:'row',
     }

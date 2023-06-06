@@ -9,12 +9,12 @@ export const CsGoBlcok = () =>{
         <BlockHeader type="" boll={'gamepad'} name={'CS:GO. European Pro League'}/>
         <View style = {{flexDirection:'row',justifyContent:'space-between',alignItems:'center',marginTop:10}}>
             <Text style = {styles.text1}>Best of 3 maps, Идёт 2-я карта</Text>
-            <View style = {{width:50,flexDirection:'row',justifyContent:'space-between',alignItems:'center'}}>
+            <View style = {{width:40,flexDirection:'row',justifyContent:'space-between',alignItems:'center'}}>
                 <Text style = {styles.text2}>2</Text>
                 <Text style = {styles.text2}>Итог</Text>
             </View>
         </View>
-        <View style = {{justifyContent:'space-between',flexDirection:'row',height:55,marginVertical:10,}}>
+        <View style = {{justifyContent:'space-between',flexDirection:'row',height:50,marginVertical:10,}}>
             <View style = {{justifyContent:'space-between'}}>
                 <View style = {styles.players}>
                     <DefaultUser />
@@ -77,6 +77,6 @@ const styles  = StyleSheet.create({
     pointWrapper:{
         flexDirection:'row',
         justifyContent:'space-between',
-        width:50,
+        width:48,
     },
 })

@@ -5,7 +5,7 @@ import { SlotsBlock } from "../SlotsBlock"
 export const Slots = () =>{
     const data = [{},{},{},{},{},{},]
     const data2 = [{},{},{},{},{},{},]
-    return <ScrollView showsVerticalScrollIndicator = {false} style = {{marginBottom:238}}>
+    return <ScrollView showsVerticalScrollIndicator = {false} style = {{marginBottom:253}}>
         {data.map((elm,i)=>{
             return <GamesBlcok key={i} index = {i}>
                 {data2.map((elm,i)=>{

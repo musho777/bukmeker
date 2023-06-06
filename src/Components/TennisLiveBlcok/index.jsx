@@ -15,7 +15,7 @@ export const TennisLiveBlock = ({index,lastIndex}) =>{
             </View>
         </View>
         <View style = {styles.gamer}>
-            <View style = {{justifyContent:'space-between',height:55}}>
+            <View style = {{justifyContent:'space-between',height:50}}>
                 <View style = {{flexDirection:'row',alignItems:'center'}}>
                     <View><Player/></View>
                     <Text style = {[styles.gameText,{marginHorizontal:10}]}>Григор Димитров</Text>
@@ -25,7 +25,7 @@ export const TennisLiveBlock = ({index,lastIndex}) =>{
                     <Text style = {[styles.gameText,{marginHorizontal:10}]}>Тейлор Герри Фритц</Text>
                 </View>
             </View>
-            <View style = {{height:55,justifyContent:'space-between'}}>
+            <View style = {{height:50,justifyContent:'space-between'}}>
                 <View style = {styles.pointWrapper}>
                     <Text style = {[styles.points,{color:"#748189"}]}>0</Text>
                     <Text style = {[styles.points,{color:"#748189"}]}>5</Text>
@@ -82,11 +82,11 @@ const styles = StyleSheet.create({
         flexDirection:'row',
         justifyContent:'space-between',
         alignItems:'center',
-        height:30,
+        marginVertical:7,
     },
     game:{
         flexDirection:'row',
-        width:80,
+        width:70,
         justifyContent:'space-between',
         alignItems:'center',
     },
@@ -98,7 +98,8 @@ const styles = StyleSheet.create({
     },
     
     gamer:{
-        height:70,
+        // height:50,
+        marginVertical:7,
         flexDirection:'row',
         justifyContent:'space-between',
     },
@@ -115,7 +116,7 @@ const styles = StyleSheet.create({
     pointWrapper:{
         flexDirection:'row',
         justifyContent:'space-between',
-        width:80,
+        width:70,
     },
     coefficient:{
         height:75
