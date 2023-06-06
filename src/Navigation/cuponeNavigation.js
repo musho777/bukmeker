@@ -5,7 +5,9 @@ import { SearchHeader } from '../Components/Headers/searchHeader';
 import { Search } from '../Pages/Search';
 import { GenereateTicket } from '../Pages/GenearateTicket';
 import { GenereateTicketHeader } from '../Components/Headers/genereateTicket';
-import { BootomModal } from '../Components/BootomSheet';
+import ExpressNavigation from './ExpresNavigation'
+import { Express } from '../Pages/Express';
+import { ExpressHeader } from '../Components/Headers/expressHeader';
 export default CuponeNavigation = () => {
   const Stack = createStackNavigator();
   return (
@@ -35,6 +37,15 @@ export default CuponeNavigation = () => {
           options = {{
             header: ({navigation}) => (
                 <GenereateTicketHeader onPress={()=>navigation.goBack()} navigation = {navigation}  />
+              ),
+          }}
+        />
+        <Stack.Screen
+          name="Express"
+          component={ExpressNavigation}
+          options = {{
+            header: ({navigation}) => (
+                <ExpressHeader onPress={()=>navigation.goBack()} navigation = {navigation}  />
               ),
           }}
         />

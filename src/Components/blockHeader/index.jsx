@@ -1,12 +1,12 @@
 import {View,StyleSheet,Text,TouchableOpacity} from 'react-native'
 import { Bells, Bolls, Play, Stare } from '../../Assets/svg'
-export const BlockHeader = ({name,boll,type ='stare'}) =>{
+export const BlockHeader = ({name,boll,type ='stare',svg = true}) =>{
     return <View style = {styles.block}>
         <View style  = {styles.title}>
             <Bolls name = {boll}/>
             <Text style = {styles.text}>{name}</Text>
         </View>
-        <View style = {styles.svg}>
+        {svg && <View style = {styles.svg}>
             <TouchableOpacity style = {{marginHorizontal:10}}>
                 {type ==='stare' ?
                     <Bells />:
@@ -16,12 +16,11 @@ export const BlockHeader = ({name,boll,type ='stare'}) =>{
             <TouchableOpacity >
                 <Stare />
             </TouchableOpacity>
-        </View>
+        </View>}
     </View>
 }
 const styles  = StyleSheet.create({
     block:{
-        // height:25,
         alignItems:'center',
         flexDirection:'row',
         justifyContent:'space-between',
