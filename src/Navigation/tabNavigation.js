@@ -9,6 +9,7 @@ import PopularNavigation from './popularNavigation';
 import { Favorites } from '../Pages/Favorites';
 import { FavoriteHeader } from '../Components/Headers/favoriteHeader';
 import favoriteNavigation from './favoriteNavigation';
+import cuponeNavigation from './cuponeNavigation';
 
 const Tab = createBottomTabNavigator();
 export default function NavigationMenu() {
@@ -50,7 +51,7 @@ export default function NavigationMenu() {
             />
              <Tab.Screen 
                 name="cupone"
-                component={Main}
+                component={cuponeNavigation}
                 options={()=>({  
                     tabBarIcon:({focused})=> <View style = {{marginTop:-30}}>
                         <Cupone focused={focused} />

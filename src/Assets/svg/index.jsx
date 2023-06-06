@@ -1100,3 +1100,75 @@ export const BigEye = () =>{
   />
 </Svg>
 }
+export const Search2 = () =>{
+  return  <Svg
+  width={34}
+  height={34}
+  viewBox="0 0 34 34"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <Rect width={34} height={34} rx={17} fill="#F5F6FA" />
+  <Path
+    d="M23.967 25.25l-5.775-5.775a5.587 5.587 0 01-3.483 1.192c-1.666 0-3.075-.577-4.228-1.731-1.153-1.154-1.73-2.563-1.731-4.228 0-1.665.577-3.074 1.73-4.227 1.154-1.153 2.564-1.73 4.228-1.731 1.666 0 3.075.577 4.228 1.73 1.153 1.154 1.73 2.564 1.73 4.228a5.587 5.587 0 01-1.191 3.484l5.775 5.775-1.283 1.283zm-9.259-6.417c1.146 0 2.12-.4 2.923-1.203.802-.803 1.203-1.776 1.202-2.922 0-1.146-.4-2.12-1.203-2.922s-1.776-1.203-2.922-1.203c-1.146 0-2.12.402-2.922 1.204-.802.802-1.203 1.776-1.203 2.921 0 1.146.402 2.12 1.204 2.923.802.802 1.776 1.203 2.921 1.202z"
+    fill="#40A789"
+  />
+</Svg>
+}
+export const Expres = () =>{
+  return <Svg
+  width={34}
+  height={34}
+  viewBox="0 0 34 34"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <Rect width={34} height={34} rx={17} fill="#F5F6FA" />
+  <Rect x={7} y={7} width={20} height={9} rx={3} fill="#40A789" />
+  <Rect x={7} y={18} width={20} height={9} rx={3} fill="#40A789" />
+  <Circle cx={11.5} cy={11.5} r={2.5} fill="#fff" />
+  <Circle cx={11.5} cy={22.5} r={2.5} fill="#fff" />
+  <Path d="M16 10h8M16 13h6" stroke="#fff" strokeLinecap="round" />
+</Svg>
+}
+export const Generation = () =>{
+  return <Svg
+  width={34}
+  height={34}
+  viewBox="0 0 34 34"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <Rect width={34} height={34} rx={17} fill="#F5F6FA" />
+  <G clipPath="url(#clip0_42_2763)">
+    <Path
+      fillRule="evenodd"
+      clipRule="evenodd"
+      d="M22.5 9.667a.917.917 0 00-1.833 0v.916h-11a.917.917 0 000 1.834h11v.916a.916.916 0 101.833 0v-.916h1.833a.917.917 0 000-1.834H22.5v-.916zM9.667 16.083a.917.917 0 000 1.834H11.5v.916a.917.917 0 001.833 0v-.916h11a.917.917 0 000-1.834h-11v-.916a.916.916 0 10-1.833 0v.916H9.667zM8.75 22.5a.917.917 0 01.917-.917h11v-.916a.916.916 0 111.833 0v.916h1.833a.917.917 0 010 1.834H22.5v.916a.917.917 0 01-1.833 0v-.916h-11a.917.917 0 01-.917-.917z"
+      fill="#40A789"
+    />
+  </G>
+  <Defs>
+    <ClipPath id="clip0_42_2763">
+      <Path fill="#fff" transform="translate(6 6)" d="M0 0H22V22H0z" />
+    </ClipPath>
+  </Defs>
+</Svg>
+}
+export const Download = () =>{
+  return  <Svg
+  width={34}
+  height={34}
+  viewBox="0 0 34 34"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <Rect width={34} height={34} rx={17} fill="#F5F6FA" />
+  <Path
+    fillRule="evenodd"
+    clipRule="evenodd"
+    d="M9.3 24.7a1.1 1.1 0 011.1-1.1h13.2a1.1 1.1 0 010 2.2H10.4a1.1 1.1 0 01-1.1-1.1zm3.622-11.322a1.1 1.1 0 010-1.556l3.3-3.3a1.1 1.1 0 011.555 0l3.3 3.3a1.1 1.1 0 01-1.555 1.556L18.1 11.955V20.3a1.1 1.1 0 01-2.2 0v-8.345l-1.423 1.423a1.1 1.1 0 01-1.555 0z"
+    fill="#40A789"
+  />
+</Svg>
+}

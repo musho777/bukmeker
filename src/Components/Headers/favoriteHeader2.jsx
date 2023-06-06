@@ -1,12 +1,12 @@
 import { StyleSheet, View,ScrollView,TouchableOpacity,Text } from "react-native"
 import { Arrow } from "../../Assets/svg"
 
-export const FavoryteHEader2 = ({onPress}) =>{
+export const FavoryteHEader2 = ({onPress,back = true,title = 'Избранное'}) =>{
     return <View style = {styles.header}>
         <TouchableOpacity onPress={onPress}>
-            <Arrow />
+            {back && <Arrow />}
         </TouchableOpacity>
-        <Text style = {styles.text}>Избранное</Text>
+        <Text style = {styles.text}>{title}</Text>
         <View></View>
     </View>
 }
