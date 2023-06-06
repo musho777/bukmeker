@@ -2,19 +2,19 @@ import { useState } from 'react'
 import { StyleSheet, TextInput, TouchableOpacity, View } from "react-native"
 import { Eye } from "../../src/Assets/svg"
 
-export const Input = ({width = "100%",placeholder,secure,value,onChange}) =>{
+export const Input = ({width = "100%",placeholder,secure,value,onChange,paddingVertical = 0}) =>{
     const [password,setPassword] = useState(secure)
     const showPassword = () =>{
         setPassword(!password)
     }
-    return <View style = {styles.inputWrapper}>
+    return <View style = {[styles.inputWrapper,{width:width}]}>
         <TextInput 
             placeholderTextColor="#748189" 
             secureTextEntry = {password} 
             placeholder={placeholder} 
             value = {value}
             onChangeText = {(e) => onChange(e)}
-            style = {[styles.input,{width:width,paddingRight:password ? 22:0}]} 
+            style = {[styles.input,{width:width,paddingRight:password ? 22:0,paddingVertical:paddingVertical}]} 
         />
         {secure &&
             <TouchableOpacity onPress={()=>showPassword()} style = {styles.password} >
@@ -30,7 +30,6 @@ const styles = StyleSheet.create({
         borderColor:'#748189',
         color:"#748189",
         paddingLeft:0,
-        paddingVertical:0,
         fontSize:18
     },
     password:{
@@ -39,6 +38,6 @@ const styles = StyleSheet.create({
         bottom:5,
     },
     inputWrapper:{
-        position:'relative'
+        position:'relative',
     }
 })

@@ -14,8 +14,8 @@ export const Ticket = ({navigation}) =>{
         <Text style = {styles.text}>Ваш купон ставок пуст. Добавьте событие в купон или выберите одну из опций </Text>
         <View>
             <HorizontalBlock2 icone={<Search2 />} text1 = {'Поиск событий'} text2 = {'Индивидуально для Вас'} onPress = {()=>navigation.navigate('Search')} />
-            <HorizontalBlock2 icone={<Expres />} text1 = {'Экспресс дня'} text2 = {'Лучшие предложения дня'} />
-            <HorizontalBlock2 icone={<Generation />} text1 = {'Генерация купона'} text2 = {'Сгенерируйте свой купон'} />
+            <HorizontalBlock2 icone={<Expres />} text1 = {'Экспресс дня'} text2 = {'Лучшие предложения дня'}  />
+            <HorizontalBlock2 icone={<Generation />} text1 = {'Генерация купона'} text2 = {'Сгенерируйте свой купон'} onPress = {()=>navigation.navigate('GenereateTicket')}/>
             <HorizontalBlock2 icone={<Download />} text1 = {'Генерация купона'} text2 = {'Сгенерируйте свой купон'} />
         </View>
     </View>
@@ -36,6 +36,3 @@ const styles  = StyleSheet.create({
         textAlign:'center'
     }
 })
-// Download
-// Expres
-// Generation

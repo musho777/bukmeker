@@ -3,6 +3,8 @@ import { FavoryteHEader2 } from '../Components/Headers/favoriteHeader2';
 import { Ticket } from '../Pages/ticket';
 import { SearchHeader } from '../Components/Headers/searchHeader';
 import { Search } from '../Pages/Search';
+import { GenereateTicket } from '../Pages/GenearateTicket';
+import { GenereateTicketHeader } from '../Components/Headers/genereateTicket';
 export default CuponeNavigation = () => {
   const Stack = createStackNavigator();
   return (
@@ -26,7 +28,15 @@ export default CuponeNavigation = () => {
               ),
           }}
         />
+        <Stack.Screen
+          name="GenereateTicket"
+          component={GenereateTicket}
+          options = {{
+            header: ({navigation}) => (
+                <GenereateTicketHeader onPress={()=>navigation.goBack()} navigation = {navigation}  />
+              ),
+          }}
+        />
       </Stack.Navigator>
   );
 };
-// Search
