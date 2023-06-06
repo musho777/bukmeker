@@ -1,7 +1,7 @@
 import { View,TouchableOpacity,StyleSheet,Text } from "react-native"
 
-export const HorizontalBlock2 = ({icone,text1,text2}) =>{
-    return <TouchableOpacity style = {styles.block} >
+export const HorizontalBlock2 = ({icone,text1,text2,onPress = {}}) =>{
+    return <TouchableOpacity onPress ={onPress} style = {styles.block} >
         <View style = {{flexDirection:'row',alignItems:'center'}}>
             {icone}
         </View>
