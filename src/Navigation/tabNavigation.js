@@ -7,6 +7,7 @@ import PopularNavigation from './popularNavigation';
 import favoriteNavigation from './favoriteNavigation';
 import cuponeNavigation from './cuponeNavigation';
 import {BottomSheetModalProvider} from '@gorhom/bottom-sheet';
+import HistoryNavigation from './HistoryNavigation';
 
 
 const Tab = createBottomTabNavigator();
@@ -59,7 +60,7 @@ export default function NavigationMenu() {
             />
             <Tab.Screen 
                 name="history"
-                component={Main}
+                component={HistoryNavigation}
                 options={()=>({  
                     tabBarIcon:({focused})=> <History focused={focused} />
                 })}
