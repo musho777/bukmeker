@@ -1,9 +1,9 @@
 import {View,StyleSheet} from 'react-native'
 import { HorizontalGameScroll } from '../../Assets/svg'
-export const GameType = ({name,active}) =>{
-    return <View  style = {[styles.block]}>
+export const GameType = ({name,active,padding}) =>{
+    return <View  style = {[styles.block,{paddingBottom:padding}]}>
         <HorizontalGameScroll name = {name} active = {active} />
-        <View style = {active && styles.active} />
+        <View style = {[active && styles.active]} />
     </View>
 }
 const styles = StyleSheet.create({
