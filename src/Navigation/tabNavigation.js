@@ -20,7 +20,7 @@ export default function NavigationMenu() {
             tabBarShowLabel: false,
             tabBarStyle: ( () => { 
                 const routeName = getFocusedRouteNameFromRoute(route) ?? ''
-                return routeName == 'QrNavigation' ? {display: 'none'} : {
+                return routeName == 'HistorySale' ? {display: 'none'} : {
                     height: 60,
                     backgroundColor:'#FFFFFF',
                     shadowColor: "#000000",
