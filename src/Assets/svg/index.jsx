@@ -1337,3 +1337,25 @@ export const RadioButton = () =>{
   />
 </Svg>
 }
+export const Checkded = () =>{
+  return <Svg
+  width={22}
+  height={22}
+  viewBox="0 0 22 22"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <G clipPath="url(#clip0_49_2480)">
+    <Rect width={22} height={22} rx={4} fill="#40A789" />
+    <Path
+      d="M8.754 16.5L3.53 11.275l1.307-1.306 3.918 3.918 8.41-8.41 1.307 1.306L8.754 16.5z"
+      fill="#fff"
+    />
+  </G>
+  <Defs>
+    <ClipPath id="clip0_49_2480">
+      <Rect width={22} height={22} rx={4} fill="#fff" />
+    </ClipPath>
+  </Defs>
+</Svg>
+}
