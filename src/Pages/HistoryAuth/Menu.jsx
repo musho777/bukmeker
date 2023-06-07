@@ -1,8 +1,17 @@
+import {useRef,useCallback} from 'react'
 import { StyleSheet, View,TouchableOpacity,Text} from "react-native"
 import { Add, Arrow3, Calendar, Sale } from "../../Assets/svg"
+import { BootomModal } from "../../Components/BootomSheet"
+import { BootomSheetMount } from './bootomSheetMount'
 
 export const Menu = ({navigation,open = true}) =>{
-    return <View style = {styles.main}>
+    const bottomSheetRef = useRef(null);
+    const handlePresentModalPress = useCallback(() => {
+        bottomSheetRef.current?.present();
+      }, []);
+
+    return <View>
+    <View style = {styles.main}>
         <Text style = {styles.text}>Основоной</Text>
         <View style = {{flexDirection:'row',justifyContent:'space-between',alignItems:'center'}}>
             <Text style = {styles.text1}>0 TMTM</Text>
@@ -12,7 +21,7 @@ export const Menu = ({navigation,open = true}) =>{
             </View>
         </View>
         {open  && <View style = {styles.menu}>
-            <TouchableOpacity style = {styles.item}>
+            <TouchableOpacity style = {styles.item} onPress ={()=>handlePresentModalPress()}>
                 <Calendar />
                 <Text style = {[styles.text,{marginTop:5}]}>За месяц</Text>
             </TouchableOpacity>
@@ -25,6 +34,10 @@ export const Menu = ({navigation,open = true}) =>{
                 <Text style = {[styles.text,{marginTop:5}]}>Пополнить</Text>
             </TouchableOpacity>
         </View>}
+    </View>
+        <BootomModal ref = {bottomSheetRef} >
+            <BootomSheetMount/>    
+        </BootomModal> 
     </View>
 }
 const styles = StyleSheet.create({

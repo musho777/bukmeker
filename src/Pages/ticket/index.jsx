@@ -5,6 +5,7 @@ import { Button } from "../../../ui/Button"
 import { Download, Expres, Generation, Search2 } from "../../Assets/svg"
 import { BootomModal } from "../../Components/BootomSheet"
 import { HorizontalBlock2 } from "../../Components/HorizontalBlock2"
+import { BootomSheetTicket } from './botomSheet'
 
 export const Ticket = ({navigation}) =>{
     const bottomSheetRef = useRef(null);
@@ -25,13 +26,12 @@ export const Ticket = ({navigation}) =>{
                 <HorizontalBlock2 icone={<Download />} text1 = {'Загрузить купон'} text2 = {'Загрузите имеющийся купон'} onPress = {()=>handlePresentModalPress()}/>
             </View>
         </View>
-        <BootomModal ref = {bottomSheetRef} />
+        <BootomModal ref = {bottomSheetRef} >
+            <BootomSheetTicket />
+        </BootomModal>
     </View>
 }
 const styles  = StyleSheet.create({
-    ticket:{
-
-    },
     auth:{
         flexDirection:'row',
         justifyContent:'space-between',
