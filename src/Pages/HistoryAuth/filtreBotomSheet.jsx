@@ -34,7 +34,7 @@ export const FiltreBotomSheet = () =>{
 
          }
          <View style = {{paddingHorizontal:10}}>
-            <Button text={'ПРИМЕНИТЬ'} />
+            <Button disable = {true} text={'ПРИМЕНИТЬ'} />
          </View>
     </View>
 }
