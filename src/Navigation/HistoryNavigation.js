@@ -1,11 +1,12 @@
 import {createStackNavigator} from '@react-navigation/stack';
-import { Tracked } from '../Pages/Tracked';
 import { FavoryteHEader2 } from '../Components/Headers/favoriteHeader2';
 import { HisotryNotAuth } from '../Pages/HisotryNotAuth';
+import { HistoryAuth } from '../Pages/HistoryAuth';
+import { HistoryAuthHeader } from '../Components/Headers/HistoryAuthHeader';
 export default HistoryNavigation = () => {
   const Stack = createStackNavigator();
   return (
-      <Stack.Navigator initialRouteName={'favorite'} options = {()=>{
+      <Stack.Navigator initialRouteName={'HistoryAuth'} options = {()=>{
       }}>
         <Stack.Screen
           name="HisotryNotAuth"
@@ -13,16 +14,15 @@ export default HistoryNavigation = () => {
           options = {{
             header: ({navigation}) => (
                 <FavoryteHEader2 title = {'Купон'} back = {false} navigation = {navigation}  />
-                // <FavoriteHeader navigation = {navigation} onPress={() => navigation.goBack()}  />
               ),
           }}
         />
         <Stack.Screen
-          name="Tracked"
-          component={Tracked}
+          name="HistoryAuth"
+          component={HistoryAuth}
           options = {{
             header: ({navigation}) => (
-                <FavoryteHEader2 title = {'История ставок'} back = {false} navigation = {navigation}  />
+                <HistoryAuthHeader title = {'История ставок'} back = {false} navigation = {navigation}  />
               ),
           }}
         />
