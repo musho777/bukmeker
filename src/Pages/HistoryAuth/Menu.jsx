@@ -1,7 +1,7 @@
 import { StyleSheet, View,TouchableOpacity,Text} from "react-native"
 import { Add, Arrow3, Calendar, Sale } from "../../Assets/svg"
 
-export const Menu = () =>{
+export const Menu = ({navigation}) =>{
     return <View style = {styles.main}>
         <Text style = {styles.text}>Основоной</Text>
         <View style = {{flexDirection:'row',justifyContent:'space-between',alignItems:'center'}}>
@@ -16,13 +16,13 @@ export const Menu = () =>{
                 <Calendar />
                 <Text style = {[styles.text,{marginTop:5}]}>За месяц</Text>
             </TouchableOpacity>
-            <TouchableOpacity style = {styles.item}>
+            <TouchableOpacity style = {styles.item} onPress = {()=>navigation.navigate('HistorySale')}>
                 <Sale />
-                <Text style = {[styles.text,{marginTop:5}]}>За месяц</Text>
+                <Text style = {[styles.text,{marginTop:5}]}>Продажа</Text>
             </TouchableOpacity>
             <TouchableOpacity style = {styles.item}>
                 <Add />
-                <Text style = {[styles.text,{marginTop:5}]}>За месяц</Text>
+                <Text style = {[styles.text,{marginTop:5}]}>Пополнить</Text>
             </TouchableOpacity>
         </View>
     </View>
