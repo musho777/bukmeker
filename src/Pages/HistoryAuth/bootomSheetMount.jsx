@@ -24,11 +24,11 @@ const styles = StyleSheet.create({
         fontFamily:'Inter',
         fontSize:15,
         fontWeight:400,
-        marginVertical:30,
     },
     block:{
         borderColor:'#F5F6FA',
         borderBottomWidth:1,
         marginHorizontal:20,
+        paddingVertical:20,
     }
 })

@@ -1,22 +1,29 @@
-import {useRef,useCallback} from 'react'
+import {useRef,useCallback, useMemo} from 'react'
 import { StyleSheet, View,TouchableOpacity,Text} from "react-native"
 import { Add, Arrow3, Calendar, Sale } from "../../Assets/svg"
 import { BootomModal } from "../../Components/BootomSheet"
+import { BootomsheetAllBalance } from './bootomsheetAllBalance'
 import { BootomSheetMount } from './bootomSheetMount'
 
 export const Menu = ({navigation,open = true}) =>{
     const bottomSheetRef = useRef(null);
+    const allRef = useRef(null)
     const handlePresentModalPress = useCallback(() => {
         bottomSheetRef.current?.present();
       }, []);
-
+      const handlePresentAllModalPress = useCallback(() => {
+        allRef.current?.present();
+      }, []);
+    const snapPoints = useMemo(() => ['25%'], []);
     return <View>
     <View style = {styles.main}>
         <Text style = {styles.text}>Основоной</Text>
         <View style = {{flexDirection:'row',justifyContent:'space-between',alignItems:'center'}}>
             <Text style = {styles.text1}>0 TMTM</Text>
             <View style = {{flexDirection:'row',alignItems:'center'}}>
-                <Text style = {styles.all}>Все счета</Text>
+                <TouchableOpacity onPress={()=>handlePresentAllModalPress()}>
+                    <Text style = {styles.all}>Все счета</Text>
+                </TouchableOpacity>
                 <Arrow3 />
             </View>
         </View>
@@ -35,9 +42,12 @@ export const Menu = ({navigation,open = true}) =>{
             </TouchableOpacity>
         </View>}
     </View>
-        <BootomModal ref = {bottomSheetRef} >
+        <BootomModal ref = {bottomSheetRef} snapPoints = {snapPoints}>
             <BootomSheetMount/>    
         </BootomModal> 
+        <BootomModal  ref = {allRef} snapPoints = {snapPoints}>
+            <BootomsheetAllBalance />
+        </BootomModal>
     </View>
 }
 const styles = StyleSheet.create({

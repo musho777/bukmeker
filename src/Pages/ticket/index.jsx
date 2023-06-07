@@ -1,4 +1,4 @@
-import {useRef,useCallback} from 'react'
+import {useRef,useCallback, useMemo} from 'react'
 import { StyleSheet, View,Text } from "react-native"
 import { Globalstyles } from "../../../globalStyle"
 import { Button } from "../../../ui/Button"
@@ -12,6 +12,7 @@ export const Ticket = ({navigation}) =>{
     const handlePresentModalPress = useCallback(() => {
         bottomSheetRef.current?.present();
       }, []);
+    const snapPoints = useMemo(() => ['30%'], []);
     return <View>
         <View style = {[Globalstyles.main]}>
             <View style = {styles.auth}>
@@ -26,7 +27,7 @@ export const Ticket = ({navigation}) =>{
                 <HorizontalBlock2 icone={<Download />} text1 = {'Загрузить купон'} text2 = {'Загрузите имеющийся купон'} onPress = {()=>handlePresentModalPress()}/>
             </View>
         </View>
-        <BootomModal ref = {bottomSheetRef} >
+        <BootomModal ref = {bottomSheetRef} snapPoints = {snapPoints}>
             <BootomSheetTicket />
         </BootomModal>
     </View>
