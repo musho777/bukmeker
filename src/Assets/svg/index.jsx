@@ -1992,3 +1992,29 @@ export const NotChecketRadioButton = () =>{
   />
 </Svg>
 }
+export const MessageBg = () =>{
+  return <Svg
+  width={34}
+  height={34}
+  viewBox="0 0 34 34"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <Rect width={34} height={34} rx={17} fill="#F5F6FA" />
+  <Path
+    d="M24.2 10H9.8c-.99 0-1.8.787-1.8 1.75v10.5c0 .962.81 1.75 1.8 1.75h14.4c.99 0 1.8-.788 1.8-1.75v-10.5c0-.963-.81-1.75-1.8-1.75zm-.36 3.719l-5.886 3.579a1.826 1.826 0 01-1.908 0l-5.886-3.58a.76.76 0 01-.367-.464.723.723 0 01.093-.578.754.754 0 01.494-.334.785.785 0 01.59.117L17 16.125l6.03-3.666a.776.776 0 01.59-.117.777.777 0 01.494.334.73.73 0 01-.274 1.043z"
+    fill="#40A789"
+  />
+</Svg>
+}
+export const Arrow4 = () =>{
+  return  <Svg
+  width={9}
+  height={14}
+  viewBox="0 0 9 14"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <Path d="M1 13l6-6-6-6" stroke="#748189" strokeWidth={1.5} />
+</Svg>
+}

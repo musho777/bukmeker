@@ -15,7 +15,6 @@ export const FiltreBotomSheet = () =>{
         {name:'Продана',checked:false},
     ])
     const handelChange = (i,checked) =>{
-        console.log(data)
         let item = [...data]
         item[i].checked = !checked
         setData(item)

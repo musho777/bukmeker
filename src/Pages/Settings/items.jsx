@@ -1,7 +1,6 @@
 import { StyleSheet, Text, View,TouchableOpacity } from "react-native"
 
 export const Items = ({icon,name,data}) =>{
-    console.log(data)
     return <View style = {styles.body}>
         {name  && <Text style = {styles.text}>{name}</Text>}
         <View>

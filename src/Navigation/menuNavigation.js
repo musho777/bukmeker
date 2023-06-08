@@ -1,6 +1,7 @@
 import {createStackNavigator} from '@react-navigation/stack';
 import { FavoryteHEader2 } from '../Components/Headers/favoriteHeader2';
 import { MenuGuest } from '../Pages/Menu';
+import { NewsletterManagement } from '../Pages/NewsletterManagement';
 import { Push } from '../Pages/Push';
 import { Settings } from '../Pages/Settings';
 import { TypeOfCoefficients } from '../Pages/TypeOfCoefficients';
@@ -45,6 +46,16 @@ export default MenuNavigation = () => {
               ),
           }}
         />
+        <Stack.Screen
+          name="NewsletterManagement"
+          component={NewsletterManagement}
+          options = {{
+            header: ({navigation}) => (
+                <FavoryteHEader2 onPress={()=>navigation.goBack()} title = {'Управление рассылками'} back = {true}  navigation = {navigation}  />
+              ),
+          }}
+        />
       </Stack.Navigator>
   );
 };
+// NewsletterManagement

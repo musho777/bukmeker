@@ -30,8 +30,8 @@ export const Settings = ({navigation}) =>{
             name={'Настройки приложения'} 
             data = {[
                 {icon:<Type />,text:'Тип коэффициента',text2:'Десятичный',onPress :()=>{navigation.navigate('TypeOfCoefficients')}},
-                {icon:<Message />,text:'Push-уведомления',onPress :()=>{navigation.navigate('Push')}},
-                {icon:<Push />,text:'Управление рассылками',disabled:false},
+                {icon:<Push />,text:'Push-уведомления',onPress :()=>{navigation.navigate('Push')}},
+                {icon:<Message />,text:'Управление рассылками',disabled:false,onPress :()=>{navigation.navigate('NewsletterManagement')} },
                 {icon:<Fire />,text:'Экран популярное',disabled:false}
 
             ]}
