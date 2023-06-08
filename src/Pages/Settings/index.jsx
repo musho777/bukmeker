@@ -32,7 +32,7 @@ export const Settings = ({navigation}) =>{
                 {icon:<Type />,text:'Тип коэффициента',text2:'Десятичный',onPress :()=>{navigation.navigate('TypeOfCoefficients')}},
                 {icon:<Push />,text:'Push-уведомления',onPress :()=>{navigation.navigate('Push')}},
                 {icon:<Message />,text:'Управление рассылками',disabled:false,onPress :()=>{navigation.navigate('NewsletterManagement')} },
-                {icon:<Fire />,text:'Экран популярное',disabled:false}
+                {icon:<Fire />,text:'Экран популярное',onPress :()=>{navigation.navigate('ScreenPopular')}}
 
             ]}
         />
@@ -60,6 +60,3 @@ export const Settings = ({navigation}) =>{
         />
     </ScrollView>
 }
-const styles = StyleSheet.create({
-
-})

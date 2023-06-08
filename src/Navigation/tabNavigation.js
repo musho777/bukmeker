@@ -17,11 +17,11 @@ export default function NavigationMenu() {
     <BottomSheetModalProvider>
         <Tab.Navigator 
         screenOptions = {({route})=> ({
-           headerShown:false,
+            headerShown:false,
             tabBarShowLabel: false,
             tabBarStyle: ( () => { 
                 const routeName = getFocusedRouteNameFromRoute(route) ?? ''
-                return routeName == 'HistorySale' ||routeName === 'Settings' ||routeName === 'NewsletterManagement' ||routeName === 'TypeOfCoefficients' || routeName === 'Push' ? {display: 'none'} : {
+                return routeName == 'HistorySale' ||routeName === 'Settings' ||routeName === 'NewsletterManagement' ||routeName === 'TypeOfCoefficients' || routeName === 'ScreenPopular' ||routeName === 'Push' ? {display: 'none'} : {
                     height: 60,
                     backgroundColor:'#FFFFFF',
                     shadowColor: "#000000",
@@ -39,6 +39,7 @@ export default function NavigationMenu() {
             <Tab.Screen 
                 name="MainPage"
                 component={PopularNavigation}
+
                 options={()=>({  
                     tabBarIcon:({focused})=> <Popular focused={focused} />
                 })}
@@ -69,7 +70,7 @@ export default function NavigationMenu() {
             <Tab.Screen 
                 name="MenuNavigation"
                 component={MenuNavigation}
-                options={()=>({  
+                options={()=>({ 
                     tabBarIcon:({focused})=> <Menu focused={focused} />
                 })}
             />

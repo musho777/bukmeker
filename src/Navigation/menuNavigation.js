@@ -3,12 +3,13 @@ import { FavoryteHEader2 } from '../Components/Headers/favoriteHeader2';
 import { MenuGuest } from '../Pages/Menu';
 import { NewsletterManagement } from '../Pages/NewsletterManagement';
 import { Push } from '../Pages/Push';
+import { ScreenPopular } from '../Pages/ScreenPopular';
 import { Settings } from '../Pages/Settings';
 import { TypeOfCoefficients } from '../Pages/TypeOfCoefficients';
 export default MenuNavigation = () => {
   const Stack = createStackNavigator();
   return (
-      <Stack.Navigator initialRouteName={'HistoryAuth'} options = {()=>{
+      <Stack.Navigator initialRouteName={'Menu'} options = {()=>{
       }}>
         <Stack.Screen
           name="Menu"
@@ -20,11 +21,11 @@ export default MenuNavigation = () => {
           }}
         />
         <Stack.Screen
-          name="Settings"
+          name="Settings1"
           component={Settings}
           options = {{
             header: ({navigation}) => (
-                <FavoryteHEader2 onPress={()=>navigation.goBack()} title = {'Настройки'} back = {true} user navigation = {navigation}  />
+                <FavoryteHEader2 onPress={()=>navigation.goBack()} title = {'Настройки'} back = {true} settings navigation = {navigation}  />
               ),
           }}
         />
@@ -55,7 +56,15 @@ export default MenuNavigation = () => {
               ),
           }}
         />
+        <Stack.Screen
+          name="ScreenPopular"
+          component={ScreenPopular}
+          options = {{
+            header: ({navigation}) => (
+                <FavoryteHEader2 onPress={()=>navigation.goBack()} title = {'Экран популярное'} back = {true}  navigation = {navigation}  />
+              ),
+          }}
+        />
       </Stack.Navigator>
   );
 };
-// NewsletterManagement

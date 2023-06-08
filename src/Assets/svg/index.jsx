@@ -2018,3 +2018,20 @@ export const Arrow4 = () =>{
   <Path d="M1 13l6-6-6-6" stroke="#748189" strokeWidth={1.5} />
 </Svg>
 }
+export const Line = () =>{
+  return <Svg
+  width={18}
+  height={10}
+  viewBox="0 0 18 10"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <Path
+    d="M1 1h16M1 9h16"
+    stroke="#748189"
+    strokeWidth={2}
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  />
+</Svg>
+}
