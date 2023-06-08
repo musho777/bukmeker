@@ -1,6 +1,7 @@
 import {createStackNavigator} from '@react-navigation/stack';
 import { FavoryteHEader2 } from '../Components/Headers/favoriteHeader2';
 import { MenuGuest } from '../Pages/Menu';
+import { Push } from '../Pages/Push';
 import { Settings } from '../Pages/Settings';
 export default MenuNavigation = () => {
   const Stack = createStackNavigator();
@@ -22,6 +23,15 @@ export default MenuNavigation = () => {
           options = {{
             header: ({navigation}) => (
                 <FavoryteHEader2 onPress={()=>navigation.goBack()} title = {'Настройки'} back = {true} user navigation = {navigation}  />
+              ),
+          }}
+        />
+        <Stack.Screen
+          name="Push"
+          component={Push}
+          options = {{
+            header: ({navigation}) => (
+                <FavoryteHEader2 onPress={()=>navigation.goBack()} title = {'Push-уведомления'} back = {true}  navigation = {navigation}  />
               ),
           }}
         />

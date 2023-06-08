@@ -3,7 +3,7 @@ import { ScrollView } from "react-native-gesture-handler"
 import { CleanCacheIcon, Cloud, Dolar, Exist, Fire, InfoBG, Locker, Message, Officail, PinCode,  Push,  Share,  ShareQR,  TouchBg, Type, VersionIcon, WalletMinuss, WalletPluss } from "../../Assets/svg"
 import { Items } from "./items"
 
-export const Settings = () =>{
+export const Settings = ({navigation}) =>{
     return <ScrollView>
         <Items 
             name={'Управление счётом'} 
@@ -30,7 +30,7 @@ export const Settings = () =>{
             name={'Настройки приложения'} 
             data = {[
                 {icon:<Type />,text:'Тип коэффициента',text2:'Десятичный',disabled:false},
-                {icon:<Message />,text:'Push-уведомления'},
+                {icon:<Message />,text:'Push-уведомления',onPress :()=>{navigation.navigate('Push')}},
                 {icon:<Push />,text:'Управление рассылками',disabled:false},
                 {icon:<Fire />,text:'Экран популярное',disabled:false}
 

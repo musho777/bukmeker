@@ -6,7 +6,7 @@ export const Items = ({icon,name,data}) =>{
         {name  && <Text style = {styles.text}>{name}</Text>}
         <View>
             {data.map((elm,i)=>(
-                <TouchableOpacity disabled = {elm.disabled} key={i} style = {[elm.disabled && {opacity:0.4},{flexDirection:'row',alignItems:'center',marginVertical:10,},,elm.text3 && {justifyContent:'space-between'}]}>
+                <TouchableOpacity onPress={elm.onPress && elm.onPress} disabled = {elm.disabled} key={i} style = {[elm.disabled && {opacity:0.4},{flexDirection:'row',alignItems:'center',marginVertical:10,},,elm.text3 && {justifyContent:'space-between'}]}>
                     <View style = {[{flexDirection:'row',alignItems:'center'}]}>
                         {elm.icon}
                         <View style = {{justifyContent:'center'}}>
