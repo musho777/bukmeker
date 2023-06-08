@@ -1,6 +1,7 @@
 import {createStackNavigator} from '@react-navigation/stack';
 import { FavoryteHEader2 } from '../Components/Headers/favoriteHeader2';
 import { MenuGuest } from '../Pages/Menu';
+import { Settings } from '../Pages/Settings';
 export default MenuNavigation = () => {
   const Stack = createStackNavigator();
   return (
@@ -15,7 +16,15 @@ export default MenuNavigation = () => {
               ),
           }}
         />
+        <Stack.Screen
+          name="Settings"
+          component={Settings}
+          options = {{
+            header: ({navigation}) => (
+                <FavoryteHEader2 onPress={()=>navigation.goBack()} title = {'Настройки'} back = {true} user navigation = {navigation}  />
+              ),
+          }}
+        />
       </Stack.Navigator>
   );
 };
-// HistorySale

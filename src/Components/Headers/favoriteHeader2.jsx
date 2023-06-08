@@ -1,7 +1,7 @@
 import { StyleSheet, View,ScrollView,TouchableOpacity,Text } from "react-native"
-import { Arrow, Settings } from "../../Assets/svg"
+import { Arrow, DefUser, Settings } from "../../Assets/svg"
 
-export const FavoryteHEader2 = ({onPress,back = true,title = 'Избранное',settings}) =>{
+export const FavoryteHEader2 = ({onPress,back = true,title = 'Избранное',settings,user,navigation}) =>{
     return <View style = {styles.header}>
         <TouchableOpacity onPress={onPress}>
             {back && <Arrow />}
@@ -9,7 +9,12 @@ export const FavoryteHEader2 = ({onPress,back = true,title = 'Избранное
         <Text style = {styles.text}>{title}</Text>
         <View>
             {settings &&
-                <Settings />
+                <TouchableOpacity onPress={()=>navigation.navigate('Settings')}>
+                    <Settings />
+                </TouchableOpacity>
+            }
+            {user && 
+                <DefUser />
             }
         </View>
     </View>
