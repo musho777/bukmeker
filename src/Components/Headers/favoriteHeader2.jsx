@@ -1,7 +1,7 @@
 import { StyleSheet, View,TouchableOpacity,Text } from "react-native"
-import { Arrow, DefUser, Settings } from "../../Assets/svg"
+import { Arrow, DefUser, Refresh, Settings } from "../../Assets/svg"
 
-export const FavoryteHEader2 = ({title = 'Избранное',settings,user,navigation,back,onPress}) =>{
+export const FavoryteHEader2 = ({title = 'Избранное',settings,user,navigation,back,onPress,refresh}) =>{
 
     return <View style = {styles.header}>
         <TouchableOpacity onPress = {onPress}>
@@ -16,6 +16,9 @@ export const FavoryteHEader2 = ({title = 'Избранное',settings,user,navi
             }
             {user && 
                 <DefUser />
+            }
+            {refresh &&
+                <Refresh />
             }
         </View>
     </View>

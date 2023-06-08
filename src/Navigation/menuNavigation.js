@@ -61,7 +61,7 @@ export default MenuNavigation = () => {
           component={ScreenPopular}
           options = {{
             header: ({navigation}) => (
-                <FavoryteHEader2 onPress={()=>navigation.goBack()} title = {'Экран популярное'} back = {true}  navigation = {navigation}  />
+                <FavoryteHEader2 refresh onPress={()=>navigation.goBack()} title = {'Экран популярное'} back = {true}  navigation = {navigation}  />
               ),
           }}
         />
