@@ -1972,3 +1972,23 @@ export const Exist  = () =>{
   />
 </Svg>
 }
+export const NotChecketRadioButton = () =>{
+  return <Svg
+  width={20}
+  height={20}
+  viewBox="0 0 20 20"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <Rect x={0.7} y={0.7} width={18.6} height={18.6} rx={9.3} fill="#fff" />
+  <Rect
+    x={0.7}
+    y={0.7}
+    width={18.6}
+    height={18.6}
+    rx={9.3}
+    stroke="#748189"
+    strokeWidth={1.4}
+  />
+</Svg>
+}

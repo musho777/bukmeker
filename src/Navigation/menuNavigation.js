@@ -3,6 +3,7 @@ import { FavoryteHEader2 } from '../Components/Headers/favoriteHeader2';
 import { MenuGuest } from '../Pages/Menu';
 import { Push } from '../Pages/Push';
 import { Settings } from '../Pages/Settings';
+import { TypeOfCoefficients } from '../Pages/TypeOfCoefficients';
 export default MenuNavigation = () => {
   const Stack = createStackNavigator();
   return (
@@ -32,6 +33,15 @@ export default MenuNavigation = () => {
           options = {{
             header: ({navigation}) => (
                 <FavoryteHEader2 onPress={()=>navigation.goBack()} title = {'Push-уведомления'} back = {true}  navigation = {navigation}  />
+              ),
+          }}
+        />
+        <Stack.Screen
+          name="TypeOfCoefficients"
+          component={TypeOfCoefficients}
+          options = {{
+            header: ({navigation}) => (
+                <FavoryteHEader2 onPress={()=>navigation.goBack()} title = {'Тип коэффицентов'} back = {true}  navigation = {navigation}  />
               ),
           }}
         />
