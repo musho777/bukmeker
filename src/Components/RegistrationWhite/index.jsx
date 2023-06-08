@@ -1,4 +1,4 @@
-import {View,Text, Dimensions} from 'react-native'
+import {View, Dimensions} from 'react-native'
 import SwiperFlatList from 'react-native-swiper-flatlist'
 import { RegistrationWhiteFull } from '../../Pages/RegistrationWhiteFull'
 import { RegistrationWhitePhone } from '../../Pages/RegistrationWhitePhone'

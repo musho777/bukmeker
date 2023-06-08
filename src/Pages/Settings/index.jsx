@@ -1,14 +1,26 @@
-import { useState } from "react"
+import { useState,useMemo,useCallback,useRef } from "react"
 import { StyleSheet, Text, View } from "react-native"
 import { ScrollView } from "react-native-gesture-handler"
 import { CleanCacheIcon, Cloud, Dolar, Exist, Fire, InfoBG, Locker, Message, Officail, PinCode,  Push,  Share,  ShareQR,  TouchBg, Type, VersionIcon, WalletMinuss, WalletPluss } from "../../Assets/svg"
+import { BootomModal } from "../../Components/BootomSheet"
 import { PopUp } from "../../Components/PopUp"
+import { BootomSheet } from "./BootomSheet"
 import { Items } from "./items"
 
 export const Settings = ({navigation}) =>{
     const [exit,setExit] = useState(false)
     const [Worning,setWorning] = useState(false)
     const [info,setInfo] = useState(false)
+    const bottomSheetRef = useRef(null)
+    const snapPoints = useMemo(() => ['40%'], []);
+    const handlePresentModalPress = useCallback(() => {
+        bottomSheetRef.current?.present();
+      }, []);
+      const handelModalDismis = () =>{
+        console.log(99)
+        bottomSheetRef.current?.dismiss();
+
+      }
     return <ScrollView>
         <Items 
             name={'Управление счётом'} 
@@ -51,7 +63,7 @@ export const Settings = ({navigation}) =>{
         <Items 
             name={'О приложении'} 
             data = {[
-                {icon:<Share />,text:'Поделиться приложением',},
+                {icon:<Share />,text:'Поделиться приложением',onPress:()=>{handlePresentModalPress()}},
                 {icon:<ShareQR />,text:'Поделиться приложением по QR'},
                 {icon:<InfoBG />,text:'Подробная информация о приложении',onPress:()=>{setInfo(true)}},
                 {icon:<VersionIcon />,text:'Версия приложения', text2: 'Mostsport v8(6247)',text3:'Обновлено'},
@@ -106,6 +118,9 @@ export const Settings = ({navigation}) =>{
                 </View>
             </PopUp>
         }
+        <View style = {{margin:-24}}>
+        <BootomSheet close = {()=>handelModalDismis()} ref = {bottomSheetRef} snapPoints = {snapPoints}/>
+        </View>
     </ScrollView>
 }
 
