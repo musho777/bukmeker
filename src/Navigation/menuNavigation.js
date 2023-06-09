@@ -8,10 +8,12 @@ import { ScreenPopular } from '../Pages/ScreenPopular';
 import { Settings } from '../Pages/Settings';
 import { TypeOfCoefficients } from '../Pages/TypeOfCoefficients';
 import {LoginHeader} from '../Components/Headers/loginHeader.jsx'
+import { RecoverPassword } from '../Pages/recoverPassword';
+import { GenereateTicketHeader } from '../Components/Headers/genereateTicket';
 export default MenuNavigation = () => {
   const Stack = createStackNavigator();
   return (
-      <Stack.Navigator initialRouteName={'Settings1'} options = {()=>{
+      <Stack.Navigator initialRouteName={'RecoverPassword'} options = {()=>{
       }}>
         <Stack.Screen
           name="Menu"
@@ -27,7 +29,7 @@ export default MenuNavigation = () => {
           component={Settings}
           options = {{
             header: ({navigation}) => (
-                <FavoryteHEader2 onPress={()=>navigation.goBack()} title = {'Настройки'} back = {true} settings navigation = {navigation}  />
+                <FavoryteHEader2 onPress={()=>navigation.goBack()} title = {'Настройки'} back = {true} user navigation = {navigation}  />
               ),
           }}
         />
@@ -73,6 +75,15 @@ export default MenuNavigation = () => {
           options = {{
             header: ({navigation}) => (
                 <LoginHeader onPress={()=>navigation.goBack()} text ={'Поделиться приложением'} />
+              ),
+          }}
+        />
+        <Stack.Screen
+          name="RecoverPassword"
+          component={RecoverPassword}
+          options = {{
+            header: ({navigation}) => (
+                <GenereateTicketHeader onPress={()=>navigation.goBack()} text ={'Восстановление пароля'} img = {require('../Assets/images/password.png')} />
               ),
           }}
         />
