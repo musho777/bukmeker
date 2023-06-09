@@ -10,6 +10,7 @@ import { TypeOfCoefficients } from '../Pages/TypeOfCoefficients';
 import {LoginHeader} from '../Components/Headers/loginHeader.jsx'
 import { RecoverPassword } from '../Pages/recoverPassword';
 import { GenereateTicketHeader } from '../Components/Headers/genereateTicket';
+import { ConfirmPassword } from '../Pages/ConfirmPassword';
 export default MenuNavigation = () => {
   const Stack = createStackNavigator();
   return (
@@ -84,6 +85,15 @@ export default MenuNavigation = () => {
           options = {{
             header: ({navigation}) => (
                 <GenereateTicketHeader onPress={()=>navigation.goBack()} text ={'Восстановление пароля'} img = {require('../Assets/images/password.png')} />
+              ),
+          }}
+        />
+        <Stack.Screen
+          name="ConfirmPassword"
+          component={ConfirmPassword}
+          options = {{
+            header: ({navigation}) => (
+                <GenereateTicketHeader onPress={()=>navigation.goBack()} text ={'Подтверждение входа'} img = {require('../Assets/images/password.png')} />
               ),
           }}
         />

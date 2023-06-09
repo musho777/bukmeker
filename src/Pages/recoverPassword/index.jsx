@@ -6,7 +6,7 @@ import { Input } from '../../../ui/Input';
 import { DropDownIcon } from '../../Assets/svg'
 const { width } = Dimensions.get('window');
 
-export const RecoverPassword = () =>{
+export const RecoverPassword = ({navigation}) =>{
     const [active,setActiev] = useState(0)
     return <View style = {styles.block}>
         <View style = {{flexDirection:'row',alignItems:'center',justifyContent:'space-around',paddingVertical:10,borderBottomColor:"#F5F6FA",borderBottomWidth:1}}>
@@ -40,7 +40,7 @@ export const RecoverPassword = () =>{
         </View>
         }
        <View style = {{position:'absolute',padding:20,paddingVertical:25,bottom:0,width:'100%'}}>
-            <Button text={'ДАЛЕЕ'} />
+            <Button onPress={() =>navigation.navigate('ConfirmPassword')} text={'ДАЛЕЕ'} />
         </View>
     </View>
 }
