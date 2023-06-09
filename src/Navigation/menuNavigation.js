@@ -3,13 +3,15 @@ import { FavoryteHEader2 } from '../Components/Headers/favoriteHeader2';
 import { MenuGuest } from '../Pages/Menu';
 import { NewsletterManagement } from '../Pages/NewsletterManagement';
 import { Push } from '../Pages/Push';
+import { Qr } from '../Pages/Qr';
 import { ScreenPopular } from '../Pages/ScreenPopular';
 import { Settings } from '../Pages/Settings';
 import { TypeOfCoefficients } from '../Pages/TypeOfCoefficients';
+import {LoginHeader} from '../Components/Headers/loginHeader.jsx'
 export default MenuNavigation = () => {
   const Stack = createStackNavigator();
   return (
-      <Stack.Navigator initialRouteName={'Menu'} options = {()=>{
+      <Stack.Navigator initialRouteName={'Settings1'} options = {()=>{
       }}>
         <Stack.Screen
           name="Menu"
@@ -62,6 +64,15 @@ export default MenuNavigation = () => {
           options = {{
             header: ({navigation}) => (
                 <FavoryteHEader2 refresh onPress={()=>navigation.goBack()} title = {'Экран популярное'} back = {true}  navigation = {navigation}  />
+              ),
+          }}
+        />
+        <Stack.Screen
+          name="Qr"
+          component={Qr}
+          options = {{
+            header: ({navigation}) => (
+                <LoginHeader onPress={()=>navigation.goBack()} text ={'Поделиться приложением'} />
               ),
           }}
         />

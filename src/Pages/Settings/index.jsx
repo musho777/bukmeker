@@ -64,7 +64,7 @@ export const Settings = ({navigation}) =>{
             name={'О приложении'} 
             data = {[
                 {icon:<Share />,text:'Поделиться приложением',onPress:()=>{handlePresentModalPress()}},
-                {icon:<ShareQR />,text:'Поделиться приложением по QR'},
+                {icon:<ShareQR />,text:'Поделиться приложением по QR',onPress:()=>navigation.navigate('Qr')},
                 {icon:<InfoBG />,text:'Подробная информация о приложении',onPress:()=>{setInfo(true)}},
                 {icon:<VersionIcon />,text:'Версия приложения', text2: 'Mostsport v8(6247)',text3:'Обновлено'},
                 {icon:<CleanCacheIcon />,text:'Очистить кэш',text3:'2.2 МБ',color:'#40A789'},
