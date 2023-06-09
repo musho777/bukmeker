@@ -11,17 +11,18 @@ import {LoginHeader} from '../Components/Headers/loginHeader.jsx'
 import { RecoverPassword } from '../Pages/recoverPassword';
 import { GenereateTicketHeader } from '../Components/Headers/genereateTicket';
 import { ConfirmPassword } from '../Pages/ConfirmPassword';
+import { LoginUSerHeader } from '../Components/Headers/LoginUserHeader';
 export default MenuNavigation = () => {
   const Stack = createStackNavigator();
   return (
-      <Stack.Navigator initialRouteName={'RecoverPassword'} options = {()=>{
+      <Stack.Navigator initialRouteName={'Menu'} options = {()=>{
       }}>
         <Stack.Screen
           name="Menu"
           component={MenuGuest}
           options = {{
             header: ({navigation}) => (
-                <FavoryteHEader2 title = {'Меню'} back = {false} settings navigation = {navigation}  />
+                <LoginUSerHeader title = {'Меню'} back = {false} settings navigation = {navigation}  />
               ),
           }}
         />
