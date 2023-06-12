@@ -15,8 +15,9 @@ import { LoginUSerHeader } from '../Components/Headers/LoginUserHeader';
 export default MenuNavigation = () => {
   const Stack = createStackNavigator();
   return (
-      <Stack.Navigator initialRouteName={'Menu'} options = {()=>{
-      }}>
+      <Stack.Navigator initialRouteName={'Menu'}  screenOptions = {({})=>({
+        headerLeft: null,
+      })}>
         <Stack.Screen
           name="Menu"
           component={MenuGuest}
@@ -26,7 +27,7 @@ export default MenuNavigation = () => {
               ),
           }}
         />
-        <Stack.Screen
+        {/* <Stack.Screen
           name="Settings1"
           component={Settings}
           options = {{
@@ -39,9 +40,14 @@ export default MenuNavigation = () => {
           name="Push"
           component={Push}
           options = {{
-            header: ({navigation}) => (
-                <FavoryteHEader2 onPress={()=>navigation.goBack()} title = {'Push-уведомления'} back = {true}  navigation = {navigation}  />
-              ),
+            headerLeft:null,
+            headerTitle: '',
+            title: '',
+            headerShadowVisible:false,
+            headerShown:false,
+            // header: ({navigation}) => (
+            //     <FavoryteHEader2 onPress={()=>navigation.goBack()} title = {'Push-уведомления'} back = {true}  navigation = {navigation}  />
+            //   ),
           }}
         />
         <Stack.Screen
@@ -79,7 +85,7 @@ export default MenuNavigation = () => {
                 <LoginHeader onPress={()=>navigation.goBack()} text ={'Поделиться приложением'} />
               ),
           }}
-        />
+        /> */}
         <Stack.Screen
           name="RecoverPassword"
           component={RecoverPassword}

@@ -72,7 +72,7 @@ export const Settings = ({navigation}) =>{
         />
         <Items 
             data = {[
-                {icon:<Exist />,text:'Поделиться приложением',color:'#E3413E',onPress:() =>{setExit(true)}},
+                {icon:<Exist />,text:'Выйти из аккаунта',color:'#E3413E',onPress:() =>{setExit(true)}},
             ]}
         />
         {exit && 

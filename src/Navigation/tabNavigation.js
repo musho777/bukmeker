@@ -39,8 +39,8 @@ export default function NavigationMenu() {
             <Tab.Screen 
                 name="MainPage"
                 component={PopularNavigation}
-
                 options={()=>({  
+                    headerShown:false,
                     tabBarIcon:({focused})=> <Popular focused={focused} />
                 })}
             />
@@ -48,6 +48,7 @@ export default function NavigationMenu() {
                 name="favoritePage"
                 component={favoriteNavigation}
                 options={()=>({  
+                    headerShown:false,
                     tabBarIcon:({focused})=> <Favorite focused={focused} />
                 })}
             />
@@ -55,6 +56,7 @@ export default function NavigationMenu() {
                 name="cupone"
                 component={cuponeNavigation}
                 options={()=>({  
+                    headerShown:false,
                     tabBarIcon:({focused})=> <View style = {{marginTop:-30}}>
                         <Cupone focused={focused} />
                     </View>
@@ -63,7 +65,8 @@ export default function NavigationMenu() {
             <Tab.Screen 
                 name="history"
                 component={HistoryNavigation}
-                options={()=>({  
+                options={()=>({
+                    headerShown:false,
                     tabBarIcon:({focused})=> <History focused={focused} />
                 })}
             />
@@ -71,6 +74,7 @@ export default function NavigationMenu() {
                 name="MenuNavigation"
                 component={MenuNavigation}
                 options={()=>({ 
+                    headerShown:false,
                     tabBarIcon:({focused})=> <Menu focused={focused} />
                 })}
             />
