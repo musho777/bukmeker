@@ -22,7 +22,7 @@ export default MenuNavigation = () => {
           component={MenuGuest}
           options = {{
             header: ({navigation}) => (
-                <LoginUSerHeader title = {'Меню'} back = {false} settings navigation = {navigation}  />
+                <FavoryteHEader2 title = {'Меню'} back = {false} settings navigation = {navigation}  />
               ),
           }}
         />

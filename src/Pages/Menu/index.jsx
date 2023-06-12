@@ -1,37 +1,34 @@
 import {useState} from 'react'
-import { StyleSheet, View,ScrollView,TouchableOpacity } from "react-native"
+import { StyleSheet, View,ScrollView,TouchableOpacity ,Text} from "react-native"
 import { Globalstyles } from '../../../globalStyle'
 import { Button } from '../../../ui/Button'
-import { CalendarBg, GameBg, GamePAdeBg, KanachGhar, LiveBg, Search2, Vishnya } from '../../Assets/svg'
+import { CalendarBg, GameBg, GamePAdeBg, KanachGhar, LiveBg, MenuIcone, Search2, Vishnya } from '../../Assets/svg'
 import { GameType } from '../../Components/gameType'
 import { HorizontalBlock2 } from '../../Components/HorizontalBlock2'
+import {Dimensions} from 'react-native';
+
+const windowWidth = Dimensions.get('window').width;
 
 export const MenuGuest = ({navigation}) =>{
     const [game,setGame] = useState([
-        {name:'live'},
-        {name:'Линия'},
-        {name:'Esports'},
+        {name:'Топ'},
+        {name:'Спорт'},
+        {name:'Казино'},
         {name:'Games'},
-        {name:'Слоты'},
-        {name:'Лайв казино'},
-        {name:'live'},
-        {name:'live'},
-        {name:'live'},
+        {name:'Разное'},
     ])
     const [active,setActive] =useState(0)
     return <View >   
-        <ScrollView style = {[{height:68},styles.scroll]} horizontal showsHorizontalScrollIndicator = {false}>
-
+        <ScrollView style = {[{height:60},styles.scroll]} horizontal showsHorizontalScrollIndicator = {false}>
             {game.map((elm,i)=>{
-                return <TouchableOpacity style = {styles.block} key={i} onPress = {()=>setActive(i)}>
-                    <GameType 
-                        index = {i} 
-                        padding = {20}
-                        key={i} 
-                        active = {i === active} 
-                        name = {elm.name}/>
+             return  <TouchableOpacity style = {[styles.block,active === i && {borderBottomWidth:2,borderBottomColor:'#40A789'}]} key={i} onPress = {()=>setActive(i)}>
+                    <MenuIcone active ={active===i} title={elm.name} />
+                    <Text style = {[styles.text ,active===i && {color:'#40A789'}]}>{elm.name}</Text>
                 </TouchableOpacity>
-            })}
+
+            })
+
+            }
         </ScrollView>
         <View style = {[Globalstyles.main,{marginTop:0}]}> 
             <View style = {styles.auth}>
@@ -52,9 +49,9 @@ const styles = StyleSheet.create({
     block:{
         backgroundColor:'#FFFFFF',
         alignItems:'center',
-        justifyContent:'center',
-        height:100,
-        
+        height:58,
+        width:windowWidth/5,
+        marginBottom:20,
     },
     scroll:{
         shadowColor: "#000000",
@@ -72,4 +69,9 @@ const styles = StyleSheet.create({
         alignItems:'center',
         marginVertical:10,
     },
+    text:{
+        fontSize:9,
+        fontFamily:'Inter-Medium',
+        color:'#748189',
+    }
 })
