@@ -18,8 +18,7 @@ export const Search = () =>{
 const styles = StyleSheet.create({
     text:{
         color:'#2A2B2D',
-        fontFamily:'Inter',
-        fontWeight:600,
+        fontFamily:'Inter-SemiBold',
         fontSize:14,
     },
     block:{

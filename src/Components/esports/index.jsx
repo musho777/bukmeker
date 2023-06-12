@@ -39,15 +39,13 @@ export const Esports = () =>{
 export const styles = StyleSheet.create({
     text:{
         fontSize:15,
-        fontFamily:'Inter',
+        fontFamily:'Inter-Medium',
         color:'#2A2B2D',
-        fontWeight:500,
     },
     all:{
         color:'#40A789',
-        fontWeight:500,
         fontSize:12,
-        fontFamily:'Inter',
+        fontFamily:'Inter-Medium',
     },
     allWrapper:{
         backgroundColor: "#E3EEF0",

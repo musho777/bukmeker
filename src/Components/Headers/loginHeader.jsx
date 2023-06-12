@@ -22,9 +22,8 @@ const styles  = StyleSheet.create({
     text:{
         color:'#748189',
         fontSize:18,
-        fontFamily:"Inter",
+        fontFamily:"Inter-Medium",
         fontStyle:"normal", 
-        fontWeight:500,
         textAlign:'center'
     }
 })

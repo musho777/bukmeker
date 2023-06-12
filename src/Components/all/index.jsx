@@ -16,8 +16,7 @@ const styles =  StyleSheet.create({
     },
     all:{
         color:'#40A789',
-        fontWeight:500,
         fontSize:12,
-        fontFamily:'Inter',
+        fontFamily:'Inter-Medium',
     },
 })

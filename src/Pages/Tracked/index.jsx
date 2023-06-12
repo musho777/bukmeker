@@ -11,8 +11,7 @@ const styles = StyleSheet.create({
     text:{
         color:'#748189',
         fontSize:14,
-        fontWeight:500,
-        fontFamily:'Inter',
+        fontFamily:'Inter-Medium',
         marginHorizontal:40,
         textAlign:'center',
         marginVertical:20

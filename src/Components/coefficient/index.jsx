@@ -8,15 +8,13 @@ export const Coefficient = ({p,k}) =>{
 }
 const styles = StyleSheet.create({
     p:{
-        fontFamily:'Inter',
-        fontWeight:500,
+        fontFamily:'Inter-Medium',
         fontSize:12,
         color:'#748189',
         marginRight:10,
     },
     k:{
-        fontFamily:'Inter',
-        fontWeight:500,
+        fontFamily:'Inter-Medium',
         fontSize:12,
         color:'#2A2B2D'
     },

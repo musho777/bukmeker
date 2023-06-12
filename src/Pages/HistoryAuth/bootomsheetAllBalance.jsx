@@ -29,9 +29,8 @@ const styles = StyleSheet.create({
     },
     text1:{
         color:'#2A2B2D',
-        fontFamily:'Inter',
+        fontFamily:'Inter-Regular',
         fontSize:15,
-        fontWeight:400,
         paddingHorizontal:10,
     },
     block:{
@@ -44,16 +43,14 @@ const styles = StyleSheet.create({
     },
     text2:{
         color:'#40A789',
-        fontFamily:'Inter',
+        fontFamily:'Inter-Regular',
         fontSize:9,
-        fontWeight:400,
         paddingHorizontal:10,
     },
     text3:{
         color:'#40A789',
-        fontFamily:'Inter',
+        fontFamily:'Inter-SemiBold',
         fontSize:10,
-        fontWeight:600,
         paddingHorizontal:10,
     }
 })

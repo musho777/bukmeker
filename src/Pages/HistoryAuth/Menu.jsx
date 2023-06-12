@@ -65,21 +65,18 @@ const styles = StyleSheet.create({
     },
     text:{
         color:'#748189',
-        fontFamily:'Inter',
+        fontFamily:'Inter-Medium',
         fontSize:10,
-        fontWeight:500,
     },
     text1:{
         color:'#2A2B2D',
-        fontFamily:'Inter',
+        fontFamily:'Inter-Medium',
         fontSize:28,
-        fontWeight:500,
     },
     all:{
         color:'#40A789',
         fontSize:12,
-        fontFamily:"Inter",
-        fontWeight:500,
+        fontFamily:"Inter-Medium",
         marginHorizontal:3,
     },
     menu:{

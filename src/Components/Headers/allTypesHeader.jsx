@@ -35,9 +35,8 @@ const styles  = StyleSheet.create({
     },
     title:{
         color:'#748189',
-        fontWeight:600,
         fontSize:16,
-        fontFamily:'Inter',
+        fontFamily:'Inter-SemiBold',
         width:'34%'
     },
     header1:{

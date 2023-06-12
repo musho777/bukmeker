@@ -127,9 +127,8 @@ export const Settings = ({navigation}) =>{
 const styles = StyleSheet.create({
     title :{
         color:'#40A789',
-        fontWeight:500,
         fontSize:18,
-        fontFamily:'Inter',
+        fontFamily:'Inter-Medium',
         textAlign:'center',
     },
     popUpWrapper:{
@@ -138,9 +137,8 @@ const styles = StyleSheet.create({
     },
     text:{
         color:'#2A2B2D',
-        fontWeight:400,
         fontSize:14,
-        fontFamily:'Inter',
+        fontFamily:'Inter-Regular',
         textAlign:'center',
         paddingHorizontal:35,
         paddingVertical:5,

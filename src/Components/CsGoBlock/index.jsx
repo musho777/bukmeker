@@ -50,15 +50,13 @@ export const CsGoBlcok = () =>{
 const styles  = StyleSheet.create({
     text1:{
         color:'#748189',
-        fontFamily:'Inter',
+        fontFamily:'Inter-Medium',
         fontSize:10,
-        fontWeight:500,
     },
     text2:{
         color:'#2A2B2D',
-        fontFamily:'Inter',
+        fontFamily:'Inter-Medium',
         fontSize:10,
-        fontWeight:500,
     },
     players:{
         flexDirection:'row',

@@ -16,9 +16,8 @@ export const HistoryAuth = ({navigation  }) =>{
 const styles = StyleSheet.create({
     text:{
         color:'#748189',
-        fontFamily:'Inter',
+        fontFamily:'Inter-Medium',
         fontSize:14,
-        fontWeight:500,
         marginVertical:30,
     }
 })

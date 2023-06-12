@@ -29,9 +29,8 @@ const style =  StyleSheet.create({
     },
     name:{  
         color:'#2A2B2D',
-        fontWeight:500,
         fontSize:15,
-        fontFamily:'Inter',
+        fontFamily:'Inter-Medium',
         marginHorizontal:10,
     }
 })

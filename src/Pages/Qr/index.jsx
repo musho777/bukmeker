@@ -15,9 +15,8 @@ export const Qr = () =>{
 const styles = StyleSheet.create({
     text:{
         color:'#748189',
-        fontFamily:'Inter',
+        fontFamily:'Inter-Medium',
         fontSize:15,
-        fontWeight:500,
         paddingHorizontal:20,
         textAlign:'center',
         marginVertical:50,

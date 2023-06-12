@@ -60,14 +60,12 @@ const styles = StyleSheet.create({
     },
     text:{
         color:'#748189',
-        fontFamily:'Inter',
-        fontWeight:600,
+        fontFamily:'Inter-SemiBold',
         fontSize:12,
     },
     text2:{
         color:'#2A2B2D',
-        fontFamily:'Inter',
-        fontWeight:500,
+        fontFamily:'Inter-Medium',
         fontSize:15,
         marginVertical:15,
     },

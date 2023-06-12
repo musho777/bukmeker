@@ -62,7 +62,7 @@ export const RegistrationWhitePhone = () =>{
            
             <View  style = {{flexDirection:'row',justifyContent:'space-between',justifyContent:'space-between',alignItems:'center',marginVertical:20}}>
                 <NotChecked />
-                <Text style = {{color:'#748189',fontSize:14,fontFamily:'Inter',fontWeight:400}}>
+                <Text style = {{color:'#748189',fontSize:14,fontFamily:'Inter-Regular'}}>
                         Вы потдверждаете, что ознакомились и 
                         соглашаетесь с правилами и политикой
                         конфиденцияльности компании, а 
@@ -72,7 +72,7 @@ export const RegistrationWhitePhone = () =>{
             </View>
             <View style = {{flexDirection:'row'}}>
                 <Info />
-                <Text style = {{marginHorizontal:30,color:'#40A789',fontSize:14,fontFamily:'Inter',fontWeight:400}}>Правила компании</Text>
+                <Text style = {{marginHorizontal:30,color:'#40A789',fontSize:14,fontFamily:'Inter-Regular'}}>Правила компании</Text>
             </View>
             <View style = {{position:'absolute',right:20,bottom:40}}>
                 <ButtonWhiteIcon />
@@ -82,9 +82,8 @@ export const RegistrationWhitePhone = () =>{
 }
 const styles = StyleSheet.create({
     text:{
-        fontFamily:'Inter',
+        fontFamily:'Inter-Medium',
         fontSize:15,
-        fontWeight:500,
         color:'#2A2B2D',
         marginHorizontal:20,
     },

@@ -36,8 +36,7 @@ const styles = StyleSheet.create({
         justifyContent:'space-between',
     },
     text:{
-        fontFamily:'Inter',
-        fontWeight:500,
+        fontFamily:'Inter-Medium',
         fontSize:12,
         color:'#748189',
     }

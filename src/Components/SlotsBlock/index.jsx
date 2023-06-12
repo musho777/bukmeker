@@ -28,14 +28,13 @@ export const styles = StyleSheet.create({
         color:'#2A2B2D',
         fontWeight:500,
         fontSize:12,
-        fontFamily:'Inter',
+        fontFamily:'Inter-Medium',
         marginTop:5,
         marginBottom:2,
     },
     text2:{
         color:'#748189',
-        fontWeight:500,
         fontSize:10,
-        fontFamily:'Inter',
+        fontFamily:'Inter-Medium',
     }
 })

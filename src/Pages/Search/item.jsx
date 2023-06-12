@@ -25,10 +25,9 @@ const styles = StyleSheet.create({
         marginVertical:7,
     },
     text:{
-        fontFamily:'Inter',
+        fontFamily:'Inter-Medium',
         fontSize:12,
         color:'#2A2B2D',
-        fontWeight:500,
         marginHorizontal:5,
     }
 })

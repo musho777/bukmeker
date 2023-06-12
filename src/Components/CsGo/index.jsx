@@ -21,9 +21,8 @@ const styles = StyleSheet.create({
     },
     text:{
         color:'#ffffff',
-        fontFamily:'Inter',
+        fontFamily:'Inter-Medium',
         fontSize:12,
-        fontWeight:500,
         position:'absolute',
         bottom:7,
         left:7,

@@ -24,8 +24,7 @@ export const styles = StyleSheet.create({
     },
     text:{
         color:'#2A2B2D',
-        fontFamily:'Inter',
-        fontWeight:500,
+        fontFamily:'Inter-Medium',
         fontSize:15,
         marginVertical:15,
         marginBottom:15,

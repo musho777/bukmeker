@@ -37,13 +37,13 @@ export const Favorites = () =>{
             </View>
             <View style = {{justifyContent:'center',marginVertical:30,width:'100%',alignItems:'center'}}>
                 <FavoriteIcone />
-                <Text style = {{color:'#2A2B2D',fontSize:14,fontFamily:'Inter',fontWeight:500,marginVertical:10}}>Список избранных игр пуст</Text>
-                <Text  style = {{color:'#748189',fontSize:14,fontFamily:'Inter',fontWeight:500,textAlign:'center',paddingHorizontal:20}}>Добавляйте события,которые Вам интересны, для быстрого доступа к ним</Text>
+                <Text style = {{color:'#2A2B2D',fontSize:14,fontFamily:'Inter-Medium',marginVertical:10}}>Список избранных игр пуст</Text>
+                <Text  style = {{color:'#748189',fontSize:14,fontFamily:'Inter-Medium',textAlign:'center',paddingHorizontal:20}}>Добавляйте события,которые Вам интересны, для быстрого доступа к ним</Text>
             </View>
             <View>
-                <Text style = {{color:'#2A2B2D',fontSize:12,fontWeight:600,fontFamily:'Inter'}}>Рекомендуемые события</Text>
+                <Text style = {{color:'#2A2B2D',fontSize:12,fontFamily:'Inter-SemiBold'}}>Рекомендуемые события</Text>
                 <View showsVerticalScrollIndicator = {false} style = {{marginVertical:20,backgroundColor:'#E5EDF0',borderRadius:10,paddingHorizontal:10,marginBottom:100}}>
-                    <Text style = {{color:'#2A2B2D',fontWeight:500,fontSize:14,fontFamily:'Inter',margin:10}}>LIVE</Text>
+                    <Text style = {{color:'#2A2B2D',fontSize:14,fontFamily:'Inter-Medium',margin:10}}>LIVE</Text>
                     {data1.map((elm,i)=>(
                         <TennisLiveBlock lastIndex={i === data.length-1} index = {i} key = {i}/>
                     ))

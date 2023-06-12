@@ -46,9 +46,8 @@ const styles = StyleSheet.create({
     },
     text1:{
         color:'#2A2B2D',
-        fontFamily:'Inter',
+        fontFamily:'Inter-Medium',
         fontSize:15,
-        fontWeight:500,
         marginHorizontal:10,
     },
     block:{

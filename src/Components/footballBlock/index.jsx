@@ -66,29 +66,25 @@ const styles = StyleSheet.create({
     title:{
         color:'#2A2B2D',
         fontSize:10,
-        fontFamily:"Inter",
-        fontWeight:500,
+        fontFamily:"Inter-Medium",
         marginHorizontal:10,
     },
     vs:{
         color:'#2A2B2D',
         fontSize:18,
-        fontFamily:"Inter",
-        fontWeight:600,
+        fontFamily:"Inter-SemiBold",
         marginHorizontal:10,
     },
     date:{
         color:"#748189",
         fontSize:12,
-        fontFamily:"Inter",
-        fontWeight:600,
+        fontFamily:"Inter-SemiBold",
         marginHorizontal:10,
     },
     date2:{
         color:"#748189",
         fontSize:12,
-        fontFamily:"Inter",
-        fontWeight:400,
+        fontFamily:"Inter-Regular",
         marginHorizontal:10,
     }
 })

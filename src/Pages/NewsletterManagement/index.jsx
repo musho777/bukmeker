@@ -59,8 +59,7 @@ const styles  = StyleSheet.create({
         padding:10,
     },
     text:{
-        fontFamily:'Inter',
-        fontWeight:500,
+        fontFamily:'Inter-Medium',
         fontSize:15,
         color:'#748189',
         width:'80%',

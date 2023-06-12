@@ -34,7 +34,7 @@ export const Login = ({navigation}) =>{
                 <Text style = {styles.forgotPassword}>Забыли пароль?</Text>
             </View>
             <TouchableOpacity onPress={()=>navigation.navigate('registration')} style = {{backgroundColor:'#40A789',height:50,justifyContent:'center',alignItems:'center'}}>
-                <Text style = {{fontSize:14,fontFamily:'Inter',color:'#F5F6FA',fontWeight:500}}>РЕГИСТРАЦИЯ</Text>
+                <Text style = {{fontSize:14,fontFamily:'Inter-Medium',color:'#F5F6FA'}}>РЕГИСТРАЦИЯ</Text>
             </TouchableOpacity>
         </ImageBackground>
     </>
@@ -50,9 +50,8 @@ const styles = StyleSheet.create({
         top:-5,
     },
     forgotPassword:{
-        fontFamily:'Inter',
+        fontFamily:'Inter-Medium',
         fontSize:16,
-        fontWeight:500,
         textAlign:'center',
         color:'#40A789'
     }

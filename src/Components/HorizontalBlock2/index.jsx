@@ -19,14 +19,12 @@ export const HorizontalBlock2 = ({icone,text1,text2,onPress = ()=>{},arrow = fal
 const styles = StyleSheet.create({
     text1:{
         color:'#2A2B2D',
-        fontFamily:'Inter',
-        fontWeight:500,
+        fontFamily:'Inter-Medium',
         fontSize:15,
     },
     title:{
         color:'#748189',
-        fontFamily:'Inter',
-        fontWeight:500,
+        fontFamily:'Inter-Medium',
         fontSize:10,
     },
     block:{

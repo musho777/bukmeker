@@ -11,7 +11,7 @@ export const Registration = ({navigation}) =>{
                 <RegistrationBlock onPress = {()=>navigation.navigate('RegistrationWhite', {index: 1})} text={'Полная'}/>
             </View>
             <TouchableOpacity onPress={()=>navigation.navigate('login')} style = {{backgroundColor:'#40A789',height:50,justifyContent:'center',alignItems:'center'}}>
-                <Text style = {{fontSize:14,fontFamily:'Inter',color:'#F5F6FA',fontWeight:500}}>АВТОРИЗАЦИЯ</Text>
+                <Text style = {{fontSize:14,fontFamily:'Inter-Medium',color:'#F5F6FA'}}>АВТОРИЗАЦИЯ</Text>
             </TouchableOpacity>
         </ImageBackground>
     </>

@@ -31,8 +31,7 @@ export const styles = StyleSheet.create({
 
     },
     title:{
-        fontFamily:'Inter',
-        fontWeight:400,
+        fontFamily:'Inter-Regular',
         fontSize:14,
         color:'#2A2B2D',
         marginHorizontal:10,

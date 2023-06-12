@@ -68,14 +68,12 @@ const styles = StyleSheet.create({
     Text:{
         color:'#748189',
         fontSize:12,
-        fontFamily:'Inter',
-        fontWeight:400,
+        fontFamily:'Inter-Regular',
     },
     text2:{
         color:'#2A2B2D',
-        fontWeight:600,
         fontSize:14,
-        fontFamily:"Inter",
+        fontFamily:"Inter-SemiBold",
     },
     block:{
         backgroundColor:'#FFFFFF',

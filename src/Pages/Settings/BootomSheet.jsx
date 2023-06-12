@@ -83,9 +83,8 @@ export const BootomSheet = forwardRef(({snapPoints,share,close},ref) =>{
     },
     text:{
         color:'red',
-        fontWeight:400,
         fontSize:14,
-        fontFamily:'Inter',
+        fontFamily:'Inter-Regular',
         textAlign:'center',
         paddingHorizontal:35,
         paddingVertical:5,

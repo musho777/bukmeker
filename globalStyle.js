@@ -38,14 +38,12 @@ export const Globalstyles = StyleSheet.create({
     confficentTitle:{
         color:'#2A2B2D',
         fontSize:12,
-        fontFamily:"Inter",
-        fontWeight:500,
+        fontFamily:"Inter-Medium",
         marginBottom:5,
     },
     count:{
         color:'#748189',
-        fontFamily:'Inter',
-        fontWeight:500,
+        fontFamily:'Inter-Medium',
         fontSize:12,
         backgroundColor:"#E5EDF0",
         paddingHorizontal:15,

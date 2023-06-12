@@ -21,9 +21,8 @@ const styles = StyleSheet.create({
     },
     text1:{
         color:'#2A2B2D',
-        fontFamily:'Inter',
+        fontFamily:'Inter-Regular',
         fontSize:15,
-        fontWeight:400,
     },
     block:{
         borderColor:'#F5F6FA',

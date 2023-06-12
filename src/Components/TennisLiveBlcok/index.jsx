@@ -7,7 +7,7 @@ export const TennisLiveBlock = ({index,lastIndex}) =>{
     return <View style = {[Globalstyles.sportBlock,index ===0 && {marginTop:20}]}>
         <BlockHeader name = {'АТР.Женева'} boll = {'tennis'} />
         <View style = {styles.timeBlock}>
-            <Text style = {{color:'#748189',fontSize:10,fontFamily:"Inter",fontWeight:500}}>Итёт 2-ий сет</Text>
+            <Text style = {{color:'#748189',fontSize:10,fontFamily:"Inter-Medium",}}>Итёт 2-ий сет</Text>
             <View style = {styles.game}>
                 <Text style = {styles.gameText}>Гейм</Text>
                 <Text style = {styles.gameText}>2</Text>
@@ -93,12 +93,10 @@ const styles = StyleSheet.create({
     gameText:{
         color:'#2A2B2D',
         fontSize:10,
-        fontFamily:"Inter",
-        fontWeight:500,
+        fontFamily:"Inter-Medium",
     },
     
     gamer:{
-        // height:50,
         marginVertical:7,
         flexDirection:'row',
         justifyContent:'space-between',

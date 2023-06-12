@@ -14,9 +14,8 @@ const styles = StyleSheet.create({
         alignItems:'center'
     },
     text:{
-        fontFamily:'Inter',
+        fontFamily:'Inter-Medium',
         fontStyle:'normal',
-        fontWeight:500,
         fontSize:14,
         color:"#F5F6FA",
     }

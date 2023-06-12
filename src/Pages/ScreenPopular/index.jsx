@@ -78,8 +78,7 @@ const styles = StyleSheet.create({
     },
     title:{
         fontSize:15,
-        fontFamily:"Inter",
-        fontWeight:600,
+        fontFamily:"Inter-SemiBold",
         color:'#2A2B2D',
     },
     item:{

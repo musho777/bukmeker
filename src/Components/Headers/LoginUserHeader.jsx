@@ -55,14 +55,12 @@ const styles = StyleSheet.create({
     }, 
     text:{
         color:'#2A2B2D',
-        fontFamily:'Inter',
-        fontWeight:600,
+        fontFamily:'Inter-SemiBold',
         fontSize:12,
     },
     text2:{
         color:'#40A789',
-        fontFamily:'Inter',
-        fontWeight:500,
+        fontFamily:'Inter-Medium',
         fontSize:9,
     },
     DropDownStyle:{

@@ -15,8 +15,7 @@ const styles = StyleSheet.create({
 
     count:{
         color:'#748189',
-        fontFamily:'Inter',
-        fontWeight:500,
+        fontFamily:'Inter-Medium',
         fontSize:12,
         backgroundColor:"#E5EDF0",
         paddingHorizontal:10,
@@ -25,8 +24,7 @@ const styles = StyleSheet.create({
     },
     title:{
         color:'#2A2B2D',
-        fontFamily:'Inter',
-        fontWeight:400,
+        fontFamily:'Inter-Regular',
         fontSize:15,
         marginHorizontal:15,
     }

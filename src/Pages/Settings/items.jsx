@@ -22,8 +22,7 @@ export const Items = ({icon,name,data}) =>{
 const styles = StyleSheet.create({
     text:{
         color:'#40A789',
-        fontFamily:'Inter',
-        fontWeight:600,
+        fontFamily:'Inter-SemiBold',
         fontSize:14,
     },
     body:{
@@ -33,15 +32,13 @@ const styles = StyleSheet.create({
     },
     text2:{
         color:'#2A2B2D',
-        fontFamily:'Inter',
-        fontWeight:600,
+        fontFamily:'Inter-SemiBold',
         fontSize:14,
         marginHorizontal:10,
     },
     text3:{
         color:'#748189',
-        fontFamily:'Inter',
-        fontWeight:600,
+        fontFamily:'Inter-SemiBold',
         fontSize:10,
         marginHorizontal:10,
     }

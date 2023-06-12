@@ -45,8 +45,7 @@ export const Card = ({name,count,icone,data,end}) =>{
 const styles = StyleSheet.create({
     text:{
         color:'#2A2B2D',
-        fontFamily:'Inter',
-        fontWeight:400,
+        fontFamily:'Inter-Regular',
         fontSize:15,
         marginHorizontal:15,
     },
