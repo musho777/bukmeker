@@ -1,13 +1,15 @@
-import { StyleSheet, View ,Text, Dimensions, ScrollView} from "react-native"
+import { StyleSheet, View ,Text, Dimensions, ScrollView,TouchableOpacity} from "react-native"
 import { Globalstyles } from "../../../globalStyle"
-import { DropDownIcon, Info, NotChecked, RegBlock } from "../../Assets/svg"
+import { Checkded, DropDownIcon, Info, NotChecked, RegBlock } from "../../Assets/svg"
 import SelectDropdown from "react-native-select-dropdown"
 import { Input } from "../../../ui/Input";
 import { Number } from "../../Components/Number";
 import { ButtonWhiteIcon } from "../../../ui/Button/ButtonWhiteIcon";
+import { useState } from "react";
 const { width,height } = Dimensions.get('window');
 
 export const RegistrationWhiteFull = () =>{
+    const [checked,setChecked] = useState(false) 
     return <ScrollView showsVerticalScrollIndicator = {false}>
         <View style = {Globalstyles.block}>
             <View style = {{height:100,marginLeft:30,flexDirection:'row',alignItems:'center'}}>
@@ -86,11 +88,6 @@ export const RegistrationWhiteFull = () =>{
                 <View>
                     <Text style = {{color:'#748189'}}>Код*</Text>
                     <Input width= {70} />
-                    {/* <SelectDropdown 
-                        renderDropdownIcon = {()=><DropDownIcon />}
-                        defaultButtonText = {' '}
-                        buttonStyle = {[styles.DropDownStyle,{width:70}]}
-                    /> */}
                 </View>
                 <Input type="numeric" placeholder={'Номер телефона*'} width={width-180}/>
             </View>
@@ -126,7 +123,14 @@ export const RegistrationWhiteFull = () =>{
                 />
             </View>
             <View  style = {{flexDirection:'row',justifyContent:'space-between',justifyContent:'space-between',alignItems:'center',marginVertical:20}}>
-                <NotChecked />
+                {checked ?
+                    <TouchableOpacity onPress={()=>setChecked(false)}>
+                        <Checkded />
+                    </TouchableOpacity>:
+                    <TouchableOpacity onPress={()=>setChecked(true)}>
+                        <NotChecked />
+                    </TouchableOpacity>
+                }
                 <Text style = {{color:'#748189',fontSize:14,fontFamily:'Inter-Regular'}}>
                         Вы потдверждаете, что ознакомились и 
                         соглашаетесь с правилами и политикой

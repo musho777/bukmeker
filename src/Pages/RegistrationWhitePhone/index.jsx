@@ -1,13 +1,15 @@
-import { Dimensions, StyleSheet, Text, View } from "react-native"
+import { useState } from "react"
+import { Dimensions, StyleSheet, Text, View,TouchableOpacity } from "react-native"
 import SelectDropdown from "react-native-select-dropdown"
 import { Globalstyles } from "../../../globalStyle"
 import { ButtonWhiteIcon } from "../../../ui/Button/ButtonWhiteIcon"
 import { Input } from "../../../ui/Input"
-import { DropDownIcon, Info, NotChecked, RegBlock } from "../../Assets/svg"
+import { Checkded, DropDownIcon, Info, NotChecked, RegBlock } from "../../Assets/svg"
 import { Number } from "../../Components/Number"
 const { width,height } = Dimensions.get('window');
 
 export const RegistrationWhitePhone = () =>{
+    const [checked,setChecked] = useState(false)
     return <View>
         <View style = {Globalstyles.block}>
             <View style = {{height:100,marginLeft:30,flexDirection:'row',alignItems:'center'}}>
@@ -61,7 +63,14 @@ export const RegistrationWhitePhone = () =>{
             </View>
            
             <View  style = {{flexDirection:'row',justifyContent:'space-between',justifyContent:'space-between',alignItems:'center',marginVertical:20}}>
-                <NotChecked />
+                {checked ?
+                    <TouchableOpacity onPress={()=>setChecked(false)}>
+                        <Checkded />
+                    </TouchableOpacity>:
+                    <TouchableOpacity onPress={()=>setChecked(true)}>
+                        <NotChecked />
+                    </TouchableOpacity>
+                }
                 <Text style = {{color:'#748189',fontSize:14,fontFamily:'Inter-Regular'}}>
                         Вы потдверждаете, что ознакомились и 
                         соглашаетесь с правилами и политикой

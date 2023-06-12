@@ -3,7 +3,7 @@ import { Add, Monny, RadioButton } from "../../Assets/svg"
 
 export const BootomsheetAllBalance = () =>{
     return <View>
-        <Text style = {styles.text}>Выберите период</Text>
+        <Text style = {styles.text}>Выберите счет</Text>
         <TouchableOpacity style = {[styles.block,{borderBottomWidth:1}]}>
             <Add />
             <Text style = {styles.text1}>Пополнить счет</Text>

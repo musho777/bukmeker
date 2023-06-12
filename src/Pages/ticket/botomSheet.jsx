@@ -1,8 +1,9 @@
 import { StyleSheet, View,Text} from "react-native"
 import { BottomSheetTextInput } from '@gorhom/bottom-sheet';
 import { Button } from "../../../ui/Button";
+import { forwardRef } from "react";
 
-export const BootomSheetTicket = () => {
+export const BootomSheetTicket = forwardRef(({},ref) => {
   return (
     <View style={styles.contentContainer}>
       <Text style={styles.text}>Загрузить купон</Text>
@@ -21,7 +22,7 @@ export const BootomSheetTicket = () => {
       </View>
     </View>
   );
-};
+});
 const styles = StyleSheet.create({
     text:{
         color:'#2A2B2D',
@@ -33,13 +34,14 @@ const styles = StyleSheet.create({
         color:'#748189',
         fontWeight:500,
         fontSize:10,
-        marginBottom:-18,
+        marginBottom:-5,
     },
     input:{
         borderBottomWidth:1.3,
         color:"#748189",
         paddingLeft:0,
         fontSize:15,
-        borderColor:'#40A789'
+        borderColor:'#40A789',
+        paddingBottom:-5
     }
 })

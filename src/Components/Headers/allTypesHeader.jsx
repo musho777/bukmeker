@@ -4,12 +4,12 @@ import {  } from "react-native-svg"
 import { SearchInpute } from "../../../ui/Input/searchInpute"
 import { Arrow, Live, Search, Touch } from "../../Assets/svg"
 
-export const AlltypesHeader = ({onPress,goBack}) =>{
+export const AlltypesHeader = ({onPress,goBack,text = 'Виды спорта'}) =>{
     const [openSearch,setOpenSearch] = useState(false)
     return <View style = {styles.header}>
         <View style = {styles.header1}>
             <TouchableOpacity  style = {styles.arrow} onPress={goBack}><Arrow /></TouchableOpacity>
-            {!openSearch && <Text style = {styles.title}>Виды спорта</Text>}
+            {!openSearch && <Text style = {styles.title}>{text}</Text>}
             {openSearch && <SearchInpute />}
             <View style = {styles.icone}>
                 {!openSearch && <TouchableOpacity>

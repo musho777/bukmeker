@@ -19,7 +19,8 @@ export const Ticket = ({navigation}) =>{
                 <Button onPress={()=>navigation.navigate('login')} width={"49%"} text = {'ВХОД'}/>
                 <Button onPress={()=>navigation.navigate('registration')} width={"49%"} text = {'РЕГИСТРАЦИЯ'}/>
             </View>
-            <Text style = {styles.text}>Ваш купон ставок пуст. Добавьте событие в купон или выберите одну из опций </Text>
+            <Text style = {styles.text}>Ваш купон ставок пуст. 
+            {"\n"} Добавьте событие в купон или выберите {"\n"}одну из опций </Text>
             <View>
                 <HorizontalBlock2 icone={<Search2 />} text1 = {'Поиск событий'} text2 = {'Индивидуально для Вас'} onPress = {()=>navigation.navigate('Search')} />
                 <HorizontalBlock2 icone={<Expres />} text1 = {'Экспресс дня'} text2 = {'Лучшие предложения дня'}  onPress = {()=>navigation.navigate('Express')} />
@@ -28,7 +29,7 @@ export const Ticket = ({navigation}) =>{
             </View>
         </View>
         <BootomModal ref = {bottomSheetRef} snapPoints = {snapPoints}>
-            <BootomSheetTicket />
+            <BootomSheetTicket ref = {bottomSheetRef} />
         </BootomModal>
     </View>
 }
@@ -41,7 +42,7 @@ const styles  = StyleSheet.create({
     text:{
         color:'#748189',
         marginVertical:20,
-        marginHorizontal:60,
+        marginHorizontal:30,
         textAlign:'center'
     }
 })

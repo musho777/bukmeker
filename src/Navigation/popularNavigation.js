@@ -35,7 +35,7 @@ export default PopularNavigation = () => {
                 options={()=>({  
                     title:'',
                     header:({navigation})=>{
-                      return <AlltypesHeader goBack = {()=>navigation.goBack()} navigation = {navigation} />
+                      return <AlltypesHeader text='Чемпионаты' goBack = {()=>navigation.goBack()} navigation = {navigation} />
                     }
                 })}
             />

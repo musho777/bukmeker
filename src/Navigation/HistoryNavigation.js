@@ -32,7 +32,7 @@ export default HistoryNavigation = () => {
           component={HistorySale}
           options = {{
             header: ({navigation}) => (
-                <FavoryteHEader2 title = {'История ставок'} navigation = {navigation}  />
+                <FavoryteHEader2 title = {'Продажа'} back navigation = {navigation}  />
               ),
           }}
         />

@@ -7,10 +7,10 @@ import { DropDownIcon } from "../../Assets/svg"
 export const GenereateTicket = () =>{
     return <View style = {styles.block}>
         <View style = {{alignItems:'center'}}>
-            <Input value={'Сумма ставки'} paddingVertical = {10}  />
+            <Input placeholder={'Сумма ставки'} paddingVertical = {10}  />
         </View>
         <View style = {{marginVertical:25}}>
-            <Input value={'Желаемый выигрыш'} paddingVertical = {10} />
+            <Input placeholder={'Желаемый выигрыш'} paddingVertical = {10} />
         </View>
         <View>
         <SelectDropdown 
