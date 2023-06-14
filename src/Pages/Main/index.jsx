@@ -16,12 +16,15 @@ export const Main = ({navigation}) =>{
     const [categroy,setCategory] = useState([
         {svg:<All />,name:'Все',title:'All'},
         {svg:<FootBall />,name:'Футбол',title:'Sport',title2:'football'},
-        {svg:<FootBall />,name:'Футбол'},
-        {svg:<FootBall />,name:'Футбол'},
-        {svg:<FootBall />,name:'Футбол'},
-        {svg:<FootBall />,name:'Футбол'},
-        {svg:<FootBall />,name:'Футбол'},
-        {svg:<FootBall />,name:'Футбол'},
+        {svg:<FootBall />,name:'Футбол',title:'Sport',title2:'football'},
+        {svg:<FootBall />,name:'Футбол',title:'Sport',title2:'football'},
+        {svg:<FootBall />,name:'Футбол',title:'Sport',title2:'football'},
+        {svg:<FootBall />,name:'Футбол',title:'Sport',title2:'football'},
+        {svg:<FootBall />,name:'Футбол',title:'Sport',title2:'football'},
+        {svg:<FootBall />,name:'Футбол',title:'Sport',title2:'football'},
+        {svg:<FootBall />,name:'Футбол',title:'Sport',title2:'football'},
+        {svg:<FootBall />,name:'Футбол',title:'Sport',title2:'football'},
+        {svg:<FootBall />,name:'Футбол',title:'Sport',title2:'football'},
 
     ])
     const [game,setGame] = useState([
